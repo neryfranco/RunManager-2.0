@@ -5,57 +5,28 @@
  */
     package com.projeto.modelo;
 
-/**
- *
- * @author Nery
- */
-public class Boleto {
-    
+    import lombok.Data;
+
+    import javax.persistence.*;
+    import java.io.Serializable;
+
+
+    @Entity
+    @Data
+public class Boleto implements Serializable {
+
     private String nome;
+    @Id
     private String cpf;
+    @ManyToMany
     private Pagamento pagamento;
-    
+
     private int pagamento_id;
 
-    public Boleto(String nome, String cpf, Pagamento pagamento) {
-        this.nome = nome;
-        this.cpf = cpf;
-        this.pagamento = pagamento;
-    }
+    public Boleto() {}
 
     
 
-    public String getNome() {
-        return nome;
-    }
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public String getCpf() {
-        return cpf;
-    }
-
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
-    }
-
-    public Pagamento getPagamento() {
-        return pagamento;
-    }
-
-    public void setPagamento(Pagamento pagamento) {
-        this.pagamento = pagamento;
-    }
-
-    public int getPagamento_id() {
-        return pagamento_id;
-    }
-
-    public void setPagamento_id(int pagamento_id) {
-        this.pagamento_id = pagamento_id;
-    }
-    
     
 }

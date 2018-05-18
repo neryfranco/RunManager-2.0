@@ -5,24 +5,20 @@
  */
 package com.projeto.modelo;
 
-import dao.CorridaDAO;
 import lombok.Data;
-import modelo.Percurso;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import java.sql.SQLException;
-import java.util.List;
+import java.io.Serializable;
 
-/**
- *
- * @author Nery
- */
 @Entity
 @Data
-public class Corrida {
+public class Corrida implements Serializable {
     @Id
-    private int id;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Integer id;
     private String nome;
     private Percurso percurso;
     private String localLargada;
@@ -31,42 +27,12 @@ public class Corrida {
     private String dataCorrida;
     private String dataRetiradaKit;
     private String localRetiradaKit;
-    private int duracaoLimite;
-    private int numMaxParticipantes;
+    private Integer duracaoLimite;
+    private Integer numMaxParticipantes;
     
-    private int percurso_id;
+    private Integer percurso_id;
 
-    public Corrida(int id, String nome, Percurso percurso, String localLargada, String localChegada, String horaLargada, String dataCorrida, String dataRetiradaKit, String localRetiradaKit, int duracaoLimite, int numMaxParticipantes) {
-        this.id = id;
-        this.nome = nome;
-        this.percurso = percurso;
-        this.localLargada = localLargada;
-        this.localChegada = localChegada;
-        this.horaLargada = horaLargada;
-        this.dataCorrida = dataCorrida;
-        this.dataRetiradaKit = dataRetiradaKit;
-        this.localRetiradaKit = localRetiradaKit;
-        this.duracaoLimite = duracaoLimite;
-        this.numMaxParticipantes = numMaxParticipantes;
-    }
+    public Corrida(){}
     
-    public static List obterCorridas() throws ClassNotFoundException{
-        return CorridaDAO.obterCorridas();
-    }
-    
-    public static Corrida obterCorrida(int id) throws ClassNotFoundException, SQLException{
-        return CorridaDAO.obterCorrida(id);
-    }
 
-    public void gravar() throws SQLException, ClassNotFoundException{
-        CorridaDAO.gravar(this);
-    }
-    
-    public void alterar() throws SQLException, ClassNotFoundException{
-        CorridaDAO.alterar(this);
-    }
-    
-    public void excluir() throws SQLException, ClassNotFoundException{
-        CorridaDAO.excluir(this);
-    }
 }

@@ -3,27 +3,29 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.projeto.modelo;
+package modelo;
+
 
 import lombok.Data;
 
 import javax.persistence.*;
 import java.io.Serializable;
 
-@Data
 @Entity
-public class Pagamento implements Serializable {
+@Data
+public class Ranking implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
-    private String metodoPagamento; 
-    private Double valor;
+    @ManyToMany
+    private Corrida corrida;
     @ManyToOne
-    private Ingresso ingresso;
+    private Categoria categoria;
     
-    private Integer ingresso_id;
+    private Integer corrida_id;
+    private Integer categoria_id;
 
-    public Pagamento() {}
+    public Ranking() {}
 
 
 }

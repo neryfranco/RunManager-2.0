@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.projeto.modelo;
+package modelo;
 
 import lombok.Data;
 
@@ -12,27 +12,24 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.io.Serializable;
+import java.util.List;
 
 @Entity
 @Data
-public class Corrida implements Serializable {
+public class Lote implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
-    private String nome;
-    private Percurso percurso;
-    private String localLargada;
-    private String localChegada;
-    private String horaLargada;
-    private String dataCorrida;
-    private String dataRetiradaKit;
-    private String localRetiradaKit;
-    private Integer duracaoLimite;
-    private Integer numMaxParticipantes;
+    private Double preco;
+    private Corrida corrida;
+    private String dataLimite;
+    private List<Ingresso> ingressos;
     
-    private Integer percurso_id;
+    private int corrida_id;
 
-    public Corrida(){}
-    
+    public Lote() {}
+
+
 
 }
+    

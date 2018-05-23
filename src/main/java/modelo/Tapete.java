@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.projeto.modelo;
+package modelo;
 
 import lombok.Data;
 
@@ -15,16 +15,16 @@ import java.io.Serializable;
 
 @Entity
 @Data
-public class Kit implements Serializable {
+public class Tapete implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer numPeito;
-    private Chip chip;
-    private String camisa;
-    
-    private Integer chip_num;
-    private Integer camisa_id;
+    private Integer id;
+    private String cep;
+    private String rua;
+    private String cidade;
+    private String uf;
+    private String referencia;
 
-    public Kit() {}
+    public Tapete() {}
 
 }

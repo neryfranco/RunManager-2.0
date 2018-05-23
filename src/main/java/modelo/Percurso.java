@@ -3,7 +3,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.projeto.modelo;
+package modelo;
+
 
 import lombok.Data;
 
@@ -14,22 +15,20 @@ import javax.persistence.Id;
 import java.io.Serializable;
 import java.util.List;
 
-@Entity
+
 @Data
-public class Lote implements Serializable {
+@Entity
+public class Percurso implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
-    private Double preco;
-    private Corrida corrida;
-    private String dataLimite;
-    private List<Ingresso> ingressos;
+    private String itinerario;
+    private Integer distancia;
+    private List<Tapete> tapetes;
     
-    private int corrida_id;
+    private Integer categoria_id;
+    private List<Integer> tapetes_id;
 
-    public Lote() {}
-
-
-
+    public Percurso() {}
+    
 }
-    

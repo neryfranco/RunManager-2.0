@@ -1,4 +1,4 @@
-package com.projeto.dao;
+package repository;
 import com.projeto.modelo.Ingresso;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Component;

@@ -1,11 +1,11 @@
-package com.projeto.dao;
-import com.projeto.modelo.Corrida;
+package repository;
+import com.projeto.modelo.Pagamento;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 
 @Repository
 @Component
-public interface CorridaRepository extends CrudRepository<Corrida, Integer> {
+public interface PagamentoRepository extends CrudRepository<Pagamento, Integer> {
 
 }

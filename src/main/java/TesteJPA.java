@@ -1,6 +1,6 @@
 
-import dao.CursoDAO;
-import dao.ProfessorDAO;
+import repository.CursoDAO;
+import repository.ProfessorDAO;
 import model.Curso;
 import model.Professor;
 

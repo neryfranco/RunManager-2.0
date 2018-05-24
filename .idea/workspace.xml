@@ -30,89 +30,64 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Percurso.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/modelo/Percurso.java">
+      <file leaf-file-name="AdministradorController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/controller/AdministradorController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="6" selection-start-line="6" selection-end-line="6" />
+            <state relative-caret-position="306">
+              <caret line="45" column="39" lean-forward="true" selection-start-line="45" selection-start-column="39" selection-end-line="45" selection-end-column="39" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Ranking.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/modelo/Ranking.java">
+      <file leaf-file-name="AdministradorRepository.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/repository/AdministradorRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="5" column="15" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
+            <state relative-caret-position="102">
+              <caret line="12" selection-start-line="12" selection-end-line="12" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Tapete.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/modelo/Tapete.java">
+      <file leaf-file-name="CrudRepository.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/1.13.9.RELEASE/spring-data-commons-1.13.9.RELEASE-sources.jar!/org/springframework/data/repository/CrudRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="5" column="15" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
+            <state relative-caret-position="202">
+              <caret line="26" column="17" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Usuario.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/modelo/Usuario.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="21" column="24" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/web/index.html">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="Administrador.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/modelo/Administrador.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="20" column="35" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pesquisaAdministrador.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="pesquisaAdministrador.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/web/pesquisaAdministrador.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="37" column="58" selection-start-line="37" selection-start-column="58" selection-end-line="37" selection-end-column="58" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TesteJPA.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/TesteJPA.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="projeto.iml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/projeto.iml">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="29" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
+            <state relative-caret-position="369">
+              <caret line="39" column="24" lean-forward="true" selection-start-line="39" selection-start-column="24" selection-end-line="39" selection-end-column="24" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>administradors</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>administradores</replace>
+    </replaceStrings>
+    <dirStrings>
+      <dir>D:\GitHub\RunManager LP3\src\main\java\controller</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -120,24 +95,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/projeto/modelo/Ingresso.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/projeto/modelo/Kit.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/projeto/modelo/Lote.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/projeto/modelo/Organizador.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/projeto/modelo/Pagamento.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/projeto/modelo/Ranking.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/projeto/modelo/Tapete.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/projeto/modelo/Usuario.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/projeto/modelo/Administrador.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/projeto/modelo/Chip.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/projeto/modelo/Corrida.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/projeto/modelo/Atleta.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/projeto/modelo/Categoria.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/projeto/modelo/CartaoCredito.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/projeto/modelo/Boleto.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/projeto/dao/AdministradorDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/projeto/dao/AtletaDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/projeto/dao/BoletoDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/projeto/dao/CartaoCreditoDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/projeto/dao/CategoriaDAO.java" />
@@ -171,6 +128,24 @@
         <option value="$PROJECT_DIR$/src/main/java/modelo/Administrador.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/web/pesquisaAdministrador.html" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/AdministradorRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/AtletaRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/BoletoRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/CartaoCreditoRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/repository/CategoriaRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/repository/ChipRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/repository/CorridaRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/repository/IngressoRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/repository/KitRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/repository/LoteRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/repository/OrganizadorRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/repository/PagamentoRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/repository/PercursoRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/repository/RankingRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/repository/TapeteRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/repository/UsuarioRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controller/AdministradorController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/repository/AdministradorRepository.java" />
       </list>
     </option>
   </component>
@@ -236,6 +211,14 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="projeto" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RunManager LP3" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="repository" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="projeto" type="b2602c69:ProjectViewProjectNode" />
@@ -372,12 +355,12 @@
       <workItem from="1527099930608" duration="682000" />
       <workItem from="1527105005002" duration="116000" />
       <workItem from="1527159681793" duration="509000" />
-      <workItem from="1527160252442" duration="307000" />
+      <workItem from="1527160252442" duration="1834000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3900000" />
+    <option name="totallyTimeSpent" value="5427000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -400,6 +383,7 @@
       <window_info anchor="right" id="Bean Validation" order="4" />
       <window_info id="Web" order="3" side_tool="true" />
       <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info id="JavaEE:App" order="2" side_tool="true" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -417,7 +401,6 @@
       <window_info id="Learn" order="3" />
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -427,31 +410,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/projeto/modelo/Corrida.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/META-INF/persistence.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/projeto/modelo/Ingresso.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/projeto/modelo/Administrador.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/projeto/modelo/Atleta.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/projeto/modelo/Boleto.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/projeto/modelo/CartaoCredito.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/projeto/modelo/Chip.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/projeto/modelo/Categoria.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/projeto/dao/AdministradorRepository.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/projeto/dao/AtletaRepository.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/projeto/dao/BoletoRepository.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/projeto/dao/CartaoCreditoRepository.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/projeto/dao/CategoriaRepository.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/projeto/dao/ChipRepository.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/projeto/dao/CorridaRepository.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/projeto/dao/IngressoRepository.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/projeto/dao/KitRepository.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/projeto/dao/LoteRepository.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/projeto/dao/OrganizadorRepository.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/projeto/dao/PagamentoRepository.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/projeto/dao/PercursoRepository.java" />
@@ -598,6 +556,118 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/ManterAdministradorController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/repository/AtletaRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/repository/BoletoRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/repository/CartaoCreditoRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/repository/CategoriaRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="19" selection-start-column="19" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/repository/ChipRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="19" selection-start-column="19" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/repository/CorridaRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="19" selection-start-column="19" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/repository/IngressoRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="19" selection-start-column="19" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/repository/KitRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="19" selection-start-column="19" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/repository/LoteRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="19" selection-start-column="19" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/repository/OrganizadorRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="19" selection-start-column="19" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/repository/PagamentoRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="19" selection-start-column="19" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/repository/PercursoRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="19" selection-start-column="19" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/repository/RankingRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="19" selection-start-column="19" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/repository/TapeteRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="19" selection-start-column="19" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/repository/UsuarioRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/modelo/Administrador.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -607,8 +677,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/web/pesquisaAdministrador.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="37" column="58" selection-start-line="37" selection-start-column="58" selection-end-line="37" selection-end-column="58" />
+        <state relative-caret-position="369">
+          <caret line="39" column="24" lean-forward="true" selection-start-line="39" selection-start-column="24" selection-end-line="39" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/1.13.9.RELEASE/spring-data-commons-1.13.9.RELEASE-sources.jar!/org/springframework/data/repository/CrudRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="26" column="17" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/AdministradorController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="45" column="39" lean-forward="true" selection-start-line="45" selection-start-column="39" selection-end-line="45" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/repository/AdministradorRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
         </state>
       </provider>
     </entry>

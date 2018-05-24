@@ -18,7 +18,7 @@ import java.io.Serializable;
 @MappedSuperclass
 @Entity
 @Data
-public class Administrador extends com.projeto.modelo.Usuario implements Serializable {
+public class Administrador extends Usuario implements Serializable {
     @Id
     private String email;
     private String senha;

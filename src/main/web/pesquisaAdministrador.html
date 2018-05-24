@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <link rel="stylesheet" type="text/css" href="css.css">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Pesquisa Administrador</title>
+    </head>
+    <body id="principal">
+        <h1>Pesquisa de Administradores</h1>
+    
+        <h4>Gerar Relatório</h4>
+        <form action="RelatorioController" method="post">
+            <input type="hidden" name="txtClasse" value="Administrador" />
+            Filtrar por: 
+            <select name="filtroRelatorio">
+                <option value=""></option>
+                <option value="Usuario_cpf">CPF</option>
+                <option value="email">E-mail</option>
+                <option value="nome">Nome</option>
+            </select>
+            <input type="text" name="parametro"/>
+            <input type="submit"/>
+        </form></br>
+        
+        <table id="customers">
+            <tr>
+                <th>CPF</th>
+                <th>Email</th>
+                <th>Nome</th>
+                <th colspan=2>Ação</th>
+            </tr>
+            <c:forEach items="${administradores}" var="administrador">
+                <tr>
+                    <td><c:out value="${administrador.cpf}" /></td>
+                    <td><c:out value="${administrador.email}" /></td>
+                    <td><c:out value="${administrador.nome}" /></td>
+                        <td><a href="/administrador/edit"${administrador.cpf}"/>">Editar</a></td>
+                        <td><a href="/administrador/delete"${administrador.cpf}"/>">Excluir</a></td>
+                </tr>
+            </c:forEach>
+        </table>
+        <form action="administrador/add" method="post">
+            <input id="botao" type="submit" name="btnIncluir" value="Incluir">
+        </form>
+        <button onclick="location.href = '/RunManager';" id="botao" >Voltar ao Menu</button>
+    </body>
+</html>

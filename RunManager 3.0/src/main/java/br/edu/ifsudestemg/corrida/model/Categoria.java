@@ -27,7 +27,4 @@ public class Categoria implements Serializable {
     private String idadeFim;
     private String descricao;
 
-    public Categoria() {}
-
-
 }

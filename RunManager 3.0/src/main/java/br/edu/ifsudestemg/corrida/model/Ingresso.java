@@ -14,21 +14,14 @@ import java.io.Serializable;
 @Data
 
 public class Ingresso implements Serializable {
-    @ManyToOne
-    private Lote lote;
     @Id
     private Long numInscricao;
     @ManyToOne
     private Kit kit;
     @ManyToOne
     private Atleta atleta;
-    private Integer lote_id;
-    private Integer kit_numPeito;
-    private String atleta_cpf;
-    private Integer pagamento_id;
+    @ManyToOne
+    private Lote lote;
 
-    public Ingresso() {
-
-    }
 }
 

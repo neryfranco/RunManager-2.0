@@ -32,7 +32,4 @@ public class Corrida implements Serializable {
     
     private Integer percurso_id;
 
-    public Corrida(){}
-    
-
 }

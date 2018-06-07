@@ -21,8 +21,7 @@ public class Percurso implements Serializable {
     private Integer id;
     private String itinerario;
     private Integer distancia;
+    @OneToMany
     private List<Tapete> tapetes;
-
-    public Percurso() {}
     
 }

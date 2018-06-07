@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head"></head>
+<body>
+<h1 th:text="${title}"> Adicionar Tapete </h1>
+
+<form method="post">
+    <table>
+        <tr>
+            <td>ID: </td>
+            <td><input type="text" name="id"/></td>
+        </tr>
+        <tr>
+            <td>RUA: </td>
+            <td><input type="text" name="rua"/></td>
+        </tr>
+        <tr>
+            <td>CEP: </td>
+            <td><input type="text" name="cep"/></td>
+        </tr>
+        <tr>
+            <td>UF: </td>
+            <td><input type="text" name="uf"/></td>
+        </tr>
+        <tr>
+            <td>CIDADE: </td>
+            <td><input type="text" name="cidade"/></td>
+        </tr>
+        <tr>
+            <td>REFERENCIA: </td>
+            <td><input type="text" name="referencia"/></td>
+        </tr>
+    </table>
+    <input type="submit" value="Adicionar Tapete"/>
+</form>
+
+</body>
+</html>

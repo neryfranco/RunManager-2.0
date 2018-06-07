@@ -7,10 +7,7 @@ package br.edu.ifsudestemg.corrida.model;
 
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.List;
 
@@ -23,13 +20,8 @@ public class Lote implements Serializable {
     private Double preco;
     private Corrida corrida;
     private String dataLimite;
+    @OneToMany(mappedBy = "lote")
     private List<Ingresso> ingressos;
-    
-    private int corrida_id;
-
-    public Lote() {}
-
-
 
 }
     

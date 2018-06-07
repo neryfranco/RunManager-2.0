@@ -22,11 +22,5 @@ public class Chip implements Serializable {
     private Integer tempoCorrida;
     @ManyToOne
     private Percurso percurso;
-    
-    private Integer percurso_id;
-    private Integer kit_id;
-
-    public Chip() {}
-
 
 }

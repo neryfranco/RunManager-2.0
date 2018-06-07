@@ -25,6 +25,4 @@ public class Tapete implements Serializable {
     private String uf;
     private String referencia;
 
-    public Tapete() {}
-
 }

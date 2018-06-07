@@ -24,8 +24,4 @@ public class Organizador extends Usuario implements Serializable {
     //@Id
     private String email;
     private String senha;
-
-   // public Organizador(){}
-
-    
 }

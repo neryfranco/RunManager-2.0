@@ -23,7 +23,5 @@ public class Pagamento implements Serializable {
     
     private Integer ingresso_id;
 
-    public Pagamento() {}
-
 
 }

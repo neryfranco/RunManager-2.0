@@ -17,15 +17,8 @@ public class Ranking implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
-    @ManyToMany
+    @ManyToOne
     private Corrida corrida;
     @ManyToOne
     private Categoria categoria;
-    
-    private Integer corrida_id;
-    private Integer categoria_id;
-
-    public Ranking() {}
-
-
 }

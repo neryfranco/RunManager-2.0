@@ -27,9 +27,5 @@ public class CartaoCredito implements Serializable {
     private Double valorParcelas;
     @ManyToOne
     private Pagamento pagamento;
-    
-    private int pagamento_id;
 
-    public CartaoCredito() {}
-    
 }

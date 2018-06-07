@@ -22,10 +22,4 @@
         @ManyToOne
         private Pagamento pagamento;
 
-        public Boleto() {}
-
-
-
-
-
     }

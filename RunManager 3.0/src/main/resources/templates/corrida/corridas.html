@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title th:text="${tittle}"> Corrida </title>
+</head>
+<body>
+<h1 th:text="${tittle}">Corrida</h1>
+
+<th:block th:switch="${operacao}">
+    <div th:case="'listar'">
+        <table>
+            <tr th:each="corrida : ${corridas}">
+                <td th:text="${corrida.nome}">nome</td>
+                <td th:text="${corrida.totalParticipantes}">Total de Participantes</td>
+                <td><a th:href="@{'/corridas/edit/' + ${corrida.id}}">Editar</a></td>
+                <td><a th:href="@{'/corridas/delete/' + ${corrida.id}}">Excluir</a></td>
+            </tr>
+        </table>
+        <a th:href="@{~/corridas/add}">Adicionar</a>
+
+    </div>
+    <div th:case="'adicionar'">
+        <form method="post">
+            <input type="text" name="nome"/>
+            <input type="text" name="totalParticipantes" />
+            <input type="submit" value="Adicionar corredor"/>
+        </form>
+
+    </div>
+    <div th:case="'editar'">
+        <form th:object="${corrida}" method="post">
+            <input th:value="*{nome}" type="text" name="nome"/>
+            <input th:value="*{totalParticipantes}" type="text" name="totalParticipantes"/>
+            <input type="submit" value="Editar corrida"/>
+        </form>
+    </div>
+    <div th:case="'deletar'">
+        <form th:object="${corrida}" method="post">
+            <input th:value="*{nome}" type="text" name="nome" disabled/>
+            <input th:value="*{totalParticipantes}" type="text" name="totalParticipantes" disabled/>
+            <input type="submit" value="Deletar corrida"/>
+        </form>
+    </div>
+</th:block>
+
+</body>
+</html>

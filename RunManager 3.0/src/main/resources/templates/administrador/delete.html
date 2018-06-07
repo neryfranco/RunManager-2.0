@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head"></head>
+<body>
+<h1 th:text="${title}"> Deletar </h1>
+
+<form th:object="${administrador}" method="post">
+    <input th:value="*{nome}" type="text" name="corredorName" disabled/>
+    <input th:value="*{cpf}" type="text" name="corredorCpf" disabled/>
+    <input type="submit" value="Deletar"/>
+</form>
+
+</body>
+</html>

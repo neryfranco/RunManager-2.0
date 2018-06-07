@@ -26,14 +26,14 @@ public class TapeteController {
     }
 
     @GetMapping(value = "add")
-    public String getTapeteesAdd(Model model){
+    public String getTapetesAdd(Model model){
         model.addAttribute("operacao", "adicionar");
         model.addAttribute("title", "Adicionar tapete");
         return "tapete/add";
     }
 
     @PostMapping(value = "add")
-    public String postTapeteesAdd(Model model, @ModelAttribute Tapete tapete){
+    public String postTapetesAdd(Model model, @ModelAttribute Tapete tapete){
         model.addAttribute("title", "Adicionar tapete");
         tapeteRepository.save(tapete);
         return "redirect:/tapete";

@@ -4,9 +4,33 @@
 <body>
 <h1 th:text="${title}"> Editar </h1>
 
-<form th:object="${administrador}" method="post">
-    <input th:value="*{nome}" type="text" name="nome"/>
-    <input th:value="*{cep}" type="text" name="cep"/>
+<form th:object="${tapete}" method="post">
+    <table>
+        <tr>
+            <td>ID: </td>
+            <td><input th:value="*{id}" type="text" name="id" readonly/></td>
+        </tr>
+        <tr>
+            <td>RUA: </td>
+            <td><input th:value="*{rua}" type="text" name="rua"/></td>
+        </tr>
+        <tr>
+            <td>CEP: </td>
+            <td><input th:value="*{cep}" type="text" name="cep"/></td>
+        </tr>
+        <tr>
+            <td>UF: </td>
+            <td><input th:value="*{uf}" type="text" name="uf"/></td>
+        </tr>
+        <tr>
+            <td>CIDADE: </td>
+            <td><input th:value="*{cidade}" type="text" name="cidade"/></td>
+        </tr>
+        <tr>
+            <td>REFERENCIA: </td>
+            <td><input th:value="*{referencia}" type="text" name="referencia"/></td>
+        </tr>
+    </table>
     <input type="submit" value="Editar"/>
 </form>
 

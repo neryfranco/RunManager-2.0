@@ -21,7 +21,6 @@ import java.io.Serializable;
 @Entity
 @Data
 public class Organizador extends Usuario implements Serializable {
-    //@Id
     private String email;
     private String senha;
 }

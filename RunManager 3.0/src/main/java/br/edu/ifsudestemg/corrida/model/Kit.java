@@ -21,8 +21,4 @@ public class Kit implements Serializable {
     private Integer numPeito;
     private Chip chip;
     private String camisa;
-    
-    private Integer chip_num;
-    private Integer camisa_id;
-
 }

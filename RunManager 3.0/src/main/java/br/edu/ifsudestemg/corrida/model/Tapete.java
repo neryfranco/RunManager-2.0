@@ -19,10 +19,6 @@ public class Tapete implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
-    private String cep;
-    private String rua;
-    private String cidade;
-    private String uf;
-    private String referencia;
-
+    private Integer posicao;
+    private Double km;
 }

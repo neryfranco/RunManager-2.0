@@ -8,10 +8,12 @@
     <tr>
         <td>ID</td>
         <td>Rua</td>
+        <td>Km</td>
     </tr>
     <tr th:each="tapete : ${tapetes}">
         <td th:text="${tapete.id}"></td>
-        <td th:text="${tapete.rua}"></td>
+        <td th:text="${tapete.posicao}"></td>
+        <td th:text="${tapete.km}"></td>
         <td><a th:href="@{'/tapete/edit/' + ${tapete.id}}" >Editar</a></td>
         <td><a th:href="@{'/tapete/delete/' + ${tapete.id}}">Excluir</a></td>
     </tr>

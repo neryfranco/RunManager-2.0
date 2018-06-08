@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments :: head"></head>
+<body>
+<h1>Lista de Percursos</h1>
+
+<table border="1">
+    <tr>
+        <td>ID</td>
+        <td>Distancia (km)</td>
+        <td>Itinerario</td>
+    </tr>
+    <tr th:each="percurso : ${percursos}">
+        <td th:text="${percurso.id}"></td>
+        <td th:text="${percurso.distancia}"></td>
+        <td th:text="${percurso.itinerario}"></td>
+        <td><a th:href="@{'/percurso/edit/' + ${percurso.id}}" >Editar</a></td>
+        <td><a th:href="@{'/percurso/delete/' + ${percurso.id}}">Excluir</a></td>
+    </tr>
+</table>
+<a th:href="@{~/percurso/add}">Adicionar</a>
+</body>
+</html>

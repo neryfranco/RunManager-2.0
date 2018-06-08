@@ -20,8 +20,4 @@ public class Pagamento implements Serializable {
     private Double valor;
     @ManyToOne
     private Ingresso ingresso;
-    
-    private Integer ingresso_id;
-
-
 }

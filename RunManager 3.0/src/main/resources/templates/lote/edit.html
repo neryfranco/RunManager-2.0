@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head"></head>
+<body>
+<h1 th:text="${title}"> Editar Lote</h1>
+
+<form th:object="${lote}" method="post">
+    <table>
+        <tr>
+            <td>Corrida: </td>
+            <td><input th:value="*{corrida}" type="text" name="corrida" disabled/></td>
+        </tr>
+        <tr>
+            <td>ID: </td>
+            <td><input th:value="*{id}" type="text" name="id" disabled/></td>
+        </tr>
+        <tr>
+            <td>Preço: </td>
+            <td><input th:value="*{preco}" type="text" name="preco"/></td>
+        </tr>
+        <tr>
+            <td>Data de Validade: </td>
+            <td><input th:value="*{dataLimite}" type="text" name="dataLimite"/></td>
+        </tr>
+    </table>
+    <input type="submit" value="Editar"/>
+</form>
+
+</body>
+</html>

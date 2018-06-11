@@ -26,17 +26,17 @@ public class OrganizadorController {
     }
 
     @GetMapping(value = "add")
-    public String getOrganizadorsAdd(Model model){
+    public String getOrganizadoresAdd(Model model){
         model.addAttribute("operacao", "adicionar");
         model.addAttribute("title", "Adicionar organizador");
-        return "organizador/organizadores";
+        return "organizador/add";
     }
 
     @PostMapping(value = "add")
-    public String postOrganizadorsAdd(Model model, @ModelAttribute Organizador organizador){
-        model.addAttribute("tittle", "Adicionar organizador");
+    public String postOrganizadoresAdd(Model model, @ModelAttribute Organizador organizador){
+        model.addAttribute("title", "Adicionar organizador");
         organizadorRepository.save(organizador);
-        return "redirect:/organizadores";
+        return "redirect:/organizador";
     }
 
     @GetMapping(value = "edit/{cpf}")
@@ -47,18 +47,18 @@ public class OrganizadorController {
         if (organizador.isPresent()){
             model.addAttribute("organizador", organizador.get());
         }
-        return "organizador/organizadores";
+        return "organizador/edit";
     }
 
     @PostMapping(value = "edit/{cpf}")
     public String postOrganizadorEdit(@ModelAttribute Organizador organizador, Model model,
-                                        @PathVariable Long cpf) throws Exception {
+                                        @PathVariable String cpf) throws Exception {
         if (cpf.equals(organizador.getCpf())) {
             organizadorRepository.save(organizador);
         } else {
             model.addAttribute("error", "Dados incorretos");
         }
-        return "redirect:/organizadores";
+        return "redirect:/organizador";
     }
 
     @GetMapping(value = "delete/{cpf}")
@@ -70,13 +70,12 @@ public class OrganizadorController {
             model.addAttribute("organizador", organizador.get());
         }
 
-        return "organizador/organizadores";
+        return "organizador/delete";
     }
 
     @PostMapping(value = "delete/{cpf}")
-    public String postOrganizadorDelete(@PathVariable Long cpf, @ModelAttribute Organizador organizador) {
+    public String postOrganizadorDelete(@PathVariable String cpf, @ModelAttribute Organizador organizador) {
         organizadorRepository.delete(organizador);
-        return "redirect:/organizadores";
+        return "redirect:/organizador";
     }
-
 }

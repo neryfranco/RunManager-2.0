@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head"></head>
+<body>
+<h1 th:text="${title}"> Adicionar </h1>
+
+<form method="post">
+    <table>
+        <tr>
+            <td>CPF: </td>
+            <td><input type="text" name="cpf"/></td>
+        </tr>
+        <tr>
+            <td>Email: </td>
+            <td><input type="text" name="email"/></td>
+        </tr>
+        <tr>
+            <td>Senha: </td>
+            <td><input type="text" name="senha"/></td>
+        </tr>
+        <tr>
+            <td>Nome: </td>
+            <td><input type="text" name="nome"/></td>
+        </tr>
+        <tr>
+            <td>Data de Nascimento: </td>
+            <td><input type="text" name="data_nascimento"/></td>
+        </tr>
+        <tr>
+            <td>Rua: </td>
+            <td><input type="text" name="rua"/></td>
+        </tr>
+        <tr>
+            <td>Sexo: </td>
+            <td><input type="text" name="sexo"/></td>
+        </tr>
+        <tr>
+            <td>Telefone Residencial: </td>
+            <td><input type="text" name="telRes"/></td>
+
+        </tr>
+        <tr>
+            <td>Telefone Celular: </td>
+            <td><input type="text" name="telCel"/></td>
+
+        </tr>
+        <tr>
+            <td>CEP: </td>
+            <td><input type="text" name="cep"/></td>
+        </tr>
+        <tr>
+            <td>UF: </td>
+            <td><input type="text" size="1" maxlength="2" name="uf"/></td>
+        </tr>
+        <tr>
+            <td>Cidade: </td>
+            <td><input type="text" name="cidade"/></td>
+        </tr>
+    </table>
+    <input type="submit" value="Adicionar Administrador"/>
+</form>
+
+</body>
+</html>

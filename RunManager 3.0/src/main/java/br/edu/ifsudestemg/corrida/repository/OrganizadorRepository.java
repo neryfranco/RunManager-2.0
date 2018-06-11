@@ -7,6 +7,4 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 @Component
-public interface OrganizadorRepository extends CrudRepository<Organizador, String> {
-
-}
+public interface OrganizadorRepository extends CrudRepository<Organizador, String> {}

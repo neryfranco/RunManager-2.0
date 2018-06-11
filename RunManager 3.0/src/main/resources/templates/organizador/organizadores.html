@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments :: head"></head>
+<body>
+<h1>Lista de Organizadores</h1>
+
+<table border="1">
+    <tr>
+        <td>CPF</td>
+        <td>Nome</td>
+    </tr>
+    <tr th:each="organizador : ${organizadores}">
+        <td th:text="${organizador.cpf}"></td>
+        <td th:text="${organizador.nome}"></td>
+        <td><a th:href="@{'/organizador/edit/' + ${organizador.cpf}}" >Editar</a></td>
+        <td><a th:href="@{'/organizador/delete/' + ${organizador.cpf}}">Excluir</a></td>
+    </tr>
+</table>
+<a th:href="@{~/organizador/add}">Adicionar</a>
+</body>
+</html>

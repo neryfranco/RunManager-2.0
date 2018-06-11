@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments :: head"></head>
+<body>
+<h1>Lista de Lotes</h1>
+
+<table border="1">
+    <tr>
+        <td>Corrida</td>
+        <td>ID</td>
+    </tr>
+    <tr th:each="lote : ${lotes}">
+        <td th:text="${lote.corrida}"></td>
+        <td th:text="${lote.id}"></td>
+        <td><a th:href="@{'/lote/edit/' + ${lote.id}}" >Editar</a></td>
+        <td><a th:href="@{'/lote/delete/' + ${lote.id}}">Excluir</a></td>
+        <!--<td><a th:href="@{'/lote/edit/' + ${lote.corrida} + ' ' + ${lote.id}}" >Editar</a></td>-->
+        <!-- <td><a th:href="@{'/lote/delete/' + ${lote.corrida} + ' ' + ${lote.id}}">Excluir</a></td> -->
+    </tr>
+</table>
+<a th:href="@{~/lote/add}">Adicionar</a>
+</body>
+</html>

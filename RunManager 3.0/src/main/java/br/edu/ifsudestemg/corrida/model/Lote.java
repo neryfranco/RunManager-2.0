@@ -15,10 +15,11 @@ import java.util.List;
 @Data
 public class Lote implements Serializable {
     @Id
+    private Corrida corrida;
+    @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
     private Double preco;
-    private Corrida corrida;
     private String dataLimite;
     @OneToMany(mappedBy = "lote")
     private List<Ingresso> ingressos;

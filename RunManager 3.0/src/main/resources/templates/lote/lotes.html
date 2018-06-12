@@ -10,12 +10,10 @@
         <td>ID</td>
     </tr>
     <tr th:each="lote : ${lotes}">
-        <td th:text="${lote.corrida}"></td>
+        <td th:text="${lote.corrida.id}"></td>
         <td th:text="${lote.id}"></td>
         <td><a th:href="@{'/lote/edit/' + ${lote.id}}" >Editar</a></td>
         <td><a th:href="@{'/lote/delete/' + ${lote.id}}">Excluir</a></td>
-        <!--<td><a th:href="@{'/lote/edit/' + ${lote.corrida} + ' ' + ${lote.id}}" >Editar</a></td>-->
-        <!-- <td><a th:href="@{'/lote/delete/' + ${lote.corrida} + ' ' + ${lote.id}}">Excluir</a></td> -->
     </tr>
 </table>
 <a th:href="@{~/lote/add}">Adicionar</a>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head"></head>
+<body>
+<h1 th:text="${title}"> Editar Corrida</h1>
+
+<form th:object="${corrida}" method="post">
+    <table>
+        <tr>
+            <td>ID: </td>
+            <td><input th:value="*{id}" type="text" name="id" disabled/></td>
+        </tr>
+        <tr>
+            <td>Nome: </td>
+            <td><input th:value="*{nome}" type="text" name="nome" /></td>
+        </tr>
+        <tr>
+            <td>Local de Largada: </td>
+            <td><input th:value="*{localLargada}" type="text" name="dataLimite" /></td>
+        </tr>
+        <tr>
+            <td>Local Chegada:  </td>
+            <td><input  th:value="*{localChegada}" type="text" name="txtLocalChegada" ></td>
+        </tr>
+        <tr>
+            <td>Horário Largada:  </td>
+            <td><input th:value="*{horaLargada}"  type="text" name="txtHorarioLargada" ></td>
+        </tr>
+        <tr>
+            <td>Data Corrida:  </td>
+            <td><input th:value="*{dataCorrida}"  type="text" name="txtDataCorrida" ></td>
+        </tr>
+        <tr>
+            <td>Data Retirada Kit:   </td>
+            <td><input th:value="*{dataRetiradaKit}"  type="text" name="txtDataRetiradaKit" ></td>
+        </tr>
+        <tr>
+            <td>Local Retirada Kit:  </td>
+            <td><input th:value="*{localRetiradaKit}"  type="text" name="txtLocalRetiradaKit" ></td>
+        </tr>
+        <tr>
+            <td>Duração Limite (min):  </td>
+            <td><input type="text" th:value="*{duracaoLimite}"  name="txtDuracaoLimite" ></td>
+        </tr>
+        <tr>
+            <td>Número Máximo Participantes:  </td>
+            <td><input type="text" th:value="*{numMaxParticipantes}"  name="txtNumMaxParticipantes" ></td>
+        </tr>
+        <tr>
+            <td>Percurso: </td>
+            <td><input type="text" th:value="*{percurso.itinerario}"  name="txtNumMaxParticipantes" ></td>
+        </tr>
+    </table>
+    <input type="submit" value="Editar"/>
+</form>
+
+</body>
+</html>

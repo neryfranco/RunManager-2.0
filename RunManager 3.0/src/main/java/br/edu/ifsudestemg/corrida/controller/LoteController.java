@@ -1,7 +1,9 @@
 package br.edu.ifsudestemg.corrida.controller;
 
 
+import br.edu.ifsudestemg.corrida.model.Corrida;
 import br.edu.ifsudestemg.corrida.model.Lote;
+import br.edu.ifsudestemg.corrida.repository.CorridaRepository;
 import br.edu.ifsudestemg.corrida.repository.LoteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -16,6 +18,7 @@ public class LoteController {
 
     @Autowired
     private LoteRepository loteRepository;
+    private CorridaRepository corridaRepository;
 
     @GetMapping(value = "")
     public String lotes(Model model){
@@ -29,6 +32,7 @@ public class LoteController {
     public String getLotesAdd(Model model){
         model.addAttribute("operacao", "adicionar");
         model.addAttribute("title", "Adicionar lote");
+        model.addAttribute("corridas", corridaRepository.findAll());
         return "lote/add";
     }
 
@@ -39,10 +43,11 @@ public class LoteController {
         return "redirect:/lote";
     }
 
-    @GetMapping(value = "edit/{id}")
+    @GetMapping(value = "edit/{corrida}/{id}")
     public String getLoteEdit(Model model, @PathVariable Integer id) {
         model.addAttribute("operacao", "editar");
         model.addAttribute("title", "Editar lote");
+        model.addAttribute("corridas", corridaRepository.findAll());
         Optional<Lote> lote = loteRepository.findById(id);
         if (lote.isPresent()){
             model.addAttribute("lote", lote.get());
@@ -50,9 +55,9 @@ public class LoteController {
         return "lote/edit";
     }
 
-    @PostMapping(value = "edit/{id}")
+    @PostMapping(value = "edit/{corrida}/{id}")
     public String postLoteEdit(@ModelAttribute Lote lote, Model model,
-                                 @PathVariable Integer id) throws Exception {
+                                 @PathVariable Integer id, @PathVariable Corrida corrida) throws Exception {
         if (id.equals(lote.getId())) {
             loteRepository.save(lote);
         } else {
@@ -61,7 +66,7 @@ public class LoteController {
         return "redirect:/lote";
     }
 
-    @GetMapping(value = "delete/{id}")
+    @GetMapping(value = "delete/{corrida}/{id}")
     public String getLoteDelete(Model model, @PathVariable Integer id) {
         model.addAttribute("operacao", "deletar");
         model.addAttribute("title", "Excluir lote");
@@ -73,7 +78,7 @@ public class LoteController {
         return "lote/delete";
     }
 
-    @PostMapping(value = "delete/{id}")
+    @PostMapping(value = "delete/{corrida}/{id}")
     public String postLoteDelete(@PathVariable Integer id, @ModelAttribute Lote lote) {
         loteRepository.delete(lote);
         return "redirect:/lote";

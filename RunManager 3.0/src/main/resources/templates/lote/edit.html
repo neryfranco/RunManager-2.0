@@ -8,7 +8,14 @@
     <table>
         <tr>
             <td>Corrida: </td>
-            <td><input th:value="*{corrida}" type="text" name="corrida" disabled/></td>
+            <td>
+                <select  name="optCorrida">
+                    <option value="0" th:if test="${lote.corrida.id == null}"> selected</th:if></option>
+                    <td th:each ="corrida : ${corridas}">
+                <option value="${corrida.id}" th:value="*{id}"> ${corrida.nome} </option>
+            </td>
+            </select>
+            </td>
         </tr>
         <tr>
             <td>ID: </td>

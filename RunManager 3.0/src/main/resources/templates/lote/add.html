@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<html lang="en" xmlns:th="http://www.thymeleaf.org/" xmlns:c="http://www.w3.org/1999/XSL/Transform">
 <head th:replace="fragments :: head"></head>
 <body>
 <h1 th:text="${title}"> Adicionar Lote </h1>
@@ -8,7 +8,14 @@
     <table>
         <tr>
             <td>Corrida: </td>
-            <td><input type="text" name="corrida"/></td>
+            <td>
+                <select  name="optCorrida">
+                <option value="0" th:if test="${lote.corrida.id == null}"></option>
+                <div th:each ="corrida : ${corridas}" style="display: none;">
+                    <option value="${corrida.id}">${corrida.nome}</option>
+                </div>
+                </select>
+            </td>
         </tr>
         <tr>
             <td>ID: </td>

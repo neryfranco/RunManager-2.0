@@ -25,6 +25,7 @@ public class CorridaController {
     public String corridas(Model model){
         model.addAttribute("operacao", "listar");
         model.addAttribute("title", "Lista de corridas");
+        model.addAttribute("corridas", corridaRepository.findAll());
         return "corrida/corridas";
     }
 
@@ -47,7 +48,7 @@ public class CorridaController {
     public String getCorridaEdit(Model model, @PathVariable Integer id) {
         model.addAttribute("operacao", "editar");
         model.addAttribute("title", "Editar corrida");
-        model.addAttribute("corridas", percursoRepository.findAll());
+        model.addAttribute("percursos", percursoRepository.findAll());
         Optional<Corrida> corrida = corridaRepository.findById(id);
         if (corrida.isPresent()){
             model.addAttribute("corrida", corrida.get());
@@ -57,7 +58,7 @@ public class CorridaController {
 
     @PostMapping(value = "edit/{id}")
     public String postCorridaEdit(@ModelAttribute Corrida corrida, Model model,
-                               @PathVariable Integer id, @PathVariable Percurso percurso) throws Exception {
+                               @PathVariable Integer id) throws Exception {
         if (id.equals(corrida.getId())) {
             corridaRepository.save(corrida);
         } else {

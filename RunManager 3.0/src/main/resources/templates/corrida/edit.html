@@ -16,39 +16,46 @@
         </tr>
         <tr>
             <td>Local de Largada: </td>
-            <td><input th:value="*{localLargada}" type="text" name="dataLimite" /></td>
+            <td><input th:value="*{localLargada}" type="text" name="localLargada" /></td>
         </tr>
         <tr>
             <td>Local Chegada:  </td>
-            <td><input  th:value="*{localChegada}" type="text" name="txtLocalChegada" ></td>
+            <td><input  th:value="*{localChegada}" type="text" name="localChegada" ></td>
         </tr>
         <tr>
             <td>Horário Largada:  </td>
-            <td><input th:value="*{horaLargada}"  type="text" name="txtHorarioLargada" ></td>
+            <td><input th:value="*{horarioLargada}"  type="text" name="horarioLargada" ></td>
         </tr>
         <tr>
             <td>Data Corrida:  </td>
-            <td><input th:value="*{dataCorrida}"  type="text" name="txtDataCorrida" ></td>
+            <td><input th:value="*{dataCorrida}"  type="text" name="dataCorrida" ></td>
         </tr>
         <tr>
             <td>Data Retirada Kit:   </td>
-            <td><input th:value="*{dataRetiradaKit}"  type="text" name="txtDataRetiradaKit" ></td>
+            <td><input th:value="*{dataRetiradaKit}"  type="text" name="dataRetiradaKit" ></td>
         </tr>
         <tr>
             <td>Local Retirada Kit:  </td>
-            <td><input th:value="*{localRetiradaKit}"  type="text" name="txtLocalRetiradaKit" ></td>
+            <td><input th:value="*{localRetiradaKit}"  type="text" name="localRetiradaKit" ></td>
         </tr>
         <tr>
             <td>Duração Limite (min):  </td>
-            <td><input type="text" th:value="*{duracaoLimite}"  name="txtDuracaoLimite" ></td>
+            <td><input type="text" th:value="*{duracaoLimite}"  name="duracaoLimite" ></td>
         </tr>
         <tr>
             <td>Número Máximo Participantes:  </td>
-            <td><input type="text" th:value="*{numMaxParticipantes}"  name="txtNumMaxParticipantes" ></td>
+            <td><input type="text" th:value="*{numMaxParticipantes}"  name="numMaxParticipantes" ></td>
         </tr>
         <tr>
             <td>Percurso: </td>
-            <td><input type="text" th:value="*{percurso.itinerario}"  name="txtNumMaxParticipantes" ></td>
+            <td>
+                <select  name="percurso">
+                    <option value="0">Selecione um Percurso</option>
+                    <th:block th:each ="percurso : ${percursos}">
+                        <option th:value="${percurso.id}" th:text="${percurso.itinerario}" th:selected="${percurso} == *{percurso}"></option>
+                    </th:block>
+                </select>
+            </td>
         </tr>
     </table>
     <input type="submit" value="Editar"/>

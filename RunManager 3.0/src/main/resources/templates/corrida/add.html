@@ -16,51 +16,47 @@
         </tr>
         <tr>
             <td>Local de Largada: </td>
-            <td><input type="text" name="dataLimite"/></td>
+            <td><input type="text" name="localLargada"/></td>
         </tr>
         <tr>
             <td>Local Chegada:  </td>
-            <td><input  type="text" name="txtLocalChegada"></td>
+            <td><input  type="text" name="localChegada"></td>
         </tr>
         <tr>
             <td>Horário Largada:  </td>
-            <td><input  type="text" name="txtHorarioLargada" ></td>
+            <td><input  type="text" name="horarioLargada" ></td>
         </tr>
         <tr>
             <td>Data Corrida:  </td>
-            <td><input  type="text" name="txtDataCorrida" ></td>
+            <td><input  type="text" name="dataCorrida" ></td>
         </tr>
         <tr>
             <td>Data Retirada Kit:   </td>
-            <td><input  type="text" name="txtDataRetiradaKit" ></td>
+            <td><input  type="text" name="dataRetiradaKit" ></td>
         </tr>
         <tr>
             <td>Local Retirada Kit:  </td>
-            <td><input  type="text" name="txtLocalRetiradaKit" ></td>
+            <td><input  type="text" name="localRetiradaKit" ></td>
         </tr>
         <tr>
             <td>Duração Limite (min):  </td>
-            <td><input type="text"  name="txtDuracaoLimite" ></td>
+            <td><input type="text"  name="duracaoLimite" ></td>
         </tr>
         <tr>
             <td>Número Máximo Participantes:  </td>
-            <td><input type="text"  name="txtNumMaxParticipantes" ></td>
+            <td><input type="text"  name="numMaxParticipantes" ></td>
         </tr>
         <tr>
-            <!--
             <td>Percurso: </td>
             <td>
-                <select  name="optPercurso">
-                    <option value="0" th:if test="${corrida.percurso.id == null}"></option>
-                    <div th:each ="percurso : ${percursos}" style="display: none;">
-                        <option value="${percurso.id}">${percurso.itinerario}</option>
-                    </div>
+                <select  name="percurso">
+                    <option value="0">Selecione um Percurso</option>
+                    <option th:each ="percurso : ${percursos}" th:value="${percurso.id}" th:text="${percurso.itinerario}"></option>
                 </select>
             </td>
-            -->
         </tr>
     </table>
-    <input type="submit" value="Adicionar Lote"/>
+    <input type="submit" value="Adicionar Corrida"/>
 </form>
 
 </body>

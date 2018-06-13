@@ -16,39 +16,39 @@
         </tr>
         <tr>
             <td>Local de Largada: </td>
-            <td><input th:value="*{localLargada}" type="text" name="dataLimite" disabled/></td>
+            <td><input th:value="*{localLargada}" type="text" name="localLargada" disabled/></td>
         </tr>
         <tr>
             <td>Local Chegada:  </td>
-            <td><input  th:value="*{localChegada}" type="text" name="txtLocalChegada" disabled></td>
+            <td><input  th:value="*{localChegada}" type="text" name="localChegada" disabled></td>
         </tr>
         <tr>
             <td>Horário Largada:  </td>
-            <td><input th:value="*{horaLargada}"  type="text" name="txtHorarioLargada" disabled></td>
+            <td><input th:value="*{horarioLargada}"  type="text" name="horarioLargada" disabled></td>
         </tr>
         <tr>
             <td>Data Corrida:  </td>
-            <td><input th:value="*{dataCorrida}"  type="text" name="txtDataCorrida" disabled></td>
+            <td><input th:value="*{dataCorrida}"  type="text" name="dataCorrida" disabled></td>
         </tr>
         <tr>
             <td>Data Retirada Kit:   </td>
-            <td><input th:value="*{dataRetiradaKit}"  type="text" name="txtDataRetiradaKit" disabled></td>
+            <td><input th:value="*{dataRetiradaKit}"  type="text" name="dataRetiradaKit" disabled></td>
         </tr>
         <tr>
             <td>Local Retirada Kit:  </td>
-            <td><input th:value="*{localRetiradaKit}"  type="text" name="txtLocalRetiradaKit" disabled></td>
+            <td><input th:value="*{localRetiradaKit}"  type="text" name="localRetiradaKit" disabled></td>
         </tr>
         <tr>
             <td>Duração Limite (min):  </td>
-            <td><input type="text" th:value="*{duracaoLimite}"  name="txtDuracaoLimite" disabled></td>
+            <td><input type="text" th:value="*{duracaoLimite}"  name="duracaoLimite" disabled></td>
         </tr>
         <tr>
             <td>Número Máximo Participantes:  </td>
-            <td><input type="text" th:value="*{numMaxParticipantes}"  name="txtNumMaxParticipantes" disabled></td>
+            <td><input type="text" th:value="*{numMaxParticipantes}"  name="numMaxParticipantes" disabled></td>
         </tr>
         <tr>
             <td>Percurso: </td>
-            <td><input type="text" th:value="*{percurso.itinerario}"  name="txtNumMaxParticipantes" disabled></td>
+            <td><input type="text" th:if="*{percurso} != null" th:value="*{percurso.itinerario}"  name="percurso" disabled></td>
         </tr>
     </table>
     <input type="submit" value="Deletar"/>

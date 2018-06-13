@@ -7,10 +7,7 @@ package br.edu.ifsudestemg.corrida.model;
 
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
@@ -20,16 +17,14 @@ public class Corrida implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
     private String nome;
+    @ManyToOne
     private Percurso percurso;
     private String localLargada;
     private String localChegada;
-    private String horaLargada;
+    private String horarioLargada;
     private String dataCorrida;
     private String dataRetiradaKit;
     private String localRetiradaKit;
     private Integer duracaoLimite;
     private Integer numMaxParticipantes;
-    
-    private Integer percurso_id;
-
 }

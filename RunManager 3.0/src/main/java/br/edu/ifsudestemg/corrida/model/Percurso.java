@@ -5,14 +5,12 @@
  */
 package br.edu.ifsudestemg.corrida.model;
 
-
 import lombok.Data;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
-
-
 @Data
 @Entity
 public class Percurso implements Serializable {

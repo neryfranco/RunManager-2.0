@@ -20,10 +20,7 @@ import java.io.Serializable;
 @Entity
 @Data
 public class Administrador extends Usuario implements Serializable {
-   // @Id
     private String email;
     private String senha;
-
-  // public Administrador(){}
 
 }

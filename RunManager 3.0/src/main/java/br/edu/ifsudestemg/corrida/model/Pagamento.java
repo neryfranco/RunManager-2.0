@@ -16,8 +16,11 @@ public class Pagamento implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
-    private String metodoPagamento; 
-    private Double valor;
+    private String metodoPagamento;
     @ManyToOne
     private Ingresso ingresso;
+
+    public Double getValor(){
+        return ingresso.getLote().getPreco();
+    }
 }

@@ -6,12 +6,14 @@
 
 <table border="1">
     <tr>
-        <td>Corrida</td>
         <td>ID</td>
+        <td>Corrida</td>
+        <td>Número de Ingressos</td>
     </tr>
     <tr th:each="lote : ${lotes}">
-        <td th:text="${lote.corrida.id}"></td>
         <td th:text="${lote.id}"></td>
+        <td th:text="${lote.corrida.nome}"></td>
+        <td th:text="${lote.numIngressos}"></td>
         <td><a th:href="@{'/lote/edit/' + ${lote.id}}" >Editar</a></td>
         <td><a th:href="@{'/lote/delete/' + ${lote.id}}">Excluir</a></td>
     </tr>

@@ -9,6 +9,7 @@ import lombok.Data;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -22,8 +23,12 @@ public class Lote implements Serializable {
     private Corrida corrida;
     private Double preco;
     private String dataLimite;
+    private Integer numIngressos;
     @OneToMany(mappedBy = "lote")
     private List<Ingresso> ingressos;
 
+    public void setNumIngressos(){
+        ingressos = new ArrayList<>(numIngressos);
+    }
 }
     

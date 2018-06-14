@@ -22,6 +22,5 @@ public class Ingresso implements Serializable {
     private Atleta atleta;
     @ManyToOne
     private Lote lote;
-
 }
 

@@ -40,6 +40,7 @@ public class LoteController {
     @PostMapping(value = "add")
     public String postLotesAdd(Model model, @ModelAttribute Lote lote){
         model.addAttribute("title", "Adicionar lote");
+        lote.setNumIngressos();
         loteRepository.save(lote);
         return "redirect:/lote";
     }
@@ -57,7 +58,9 @@ public class LoteController {
     }
 
     @PostMapping(value = "edit/{id}")
-    public String postLoteEdit(@ModelAttribute Lote lote, Model model, @PathVariable Integer id) throws Exception {
+    public String postLoteEdit(@ModelAttribute Lote lote, Model model, @PathVariable Integer id,
+                               @PathVariable Integer numIngressos) throws Exception {
+        lote.setNumIngressos(numIngressos);
         if (id.equals(lote.getId())) {
             loteRepository.save(lote);
         } else {

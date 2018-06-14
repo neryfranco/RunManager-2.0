@@ -19,13 +19,10 @@ import java.io.Serializable;
 @Entity
 @Data
 public class Atleta extends Usuario implements Serializable {
-    //@Id
     private String email;
     private String senha;
     private Double pace;
     private String apelido;
 
 
-
-   // public Atleta(){}
 }

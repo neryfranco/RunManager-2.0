@@ -7,27 +7,27 @@
 <form th:object="${lote}" method="post">
     <table>
         <tr>
-            <td>Corrida: </td>
-            <td>
-                <select  name="optCorrida">
-                    <option value="0" th:if test="${lote.corrida.id == null}"> selected</th:if></option>
-                    <td th:each ="corrida : ${corridas}">
-                <option value="${corrida.id}" th:value="*{id}"> ${corrida.nome} </option>
-            </td>
-            </select>
-            </td>
-        </tr>
-        <tr>
             <td>ID: </td>
             <td><input th:value="*{id}" type="text" name="id" disabled/></td>
         </tr>
         <tr>
-            <td>Preço: </td>
+            <td>Corrida: </td>
+            <td>
+                <select  name="corrida">
+                    <option value="0">Selecione um Corrida</option>
+                    <th:block th:each ="corrida : ${corridas}">
+                        <option th:value="${corrida.id}" th:text="${corrida.nome}" th:selected="${corrida} == *{corrida}"></option>
+                    </th:block>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Preço (R$): </td>
             <td><input th:value="*{preco}" type="text" name="preco"/></td>
         </tr>
         <tr>
             <td>Data de Validade: </td>
-            <td><input th:value="*{dataLimite}" type="text" name="dataLimite"/></td>
+            <td><input th:value="*{dataLimite}" type="date" name="dataLimite"/></td>
         </tr>
     </table>
     <input type="submit" value="Editar"/>

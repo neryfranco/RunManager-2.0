@@ -9,6 +9,8 @@ import lombok.Data;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.sql.Time;
+import java.util.Date;
 
 @Entity
 @Data

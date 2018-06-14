@@ -7,27 +7,25 @@
 <form method="post">
     <table>
         <tr>
-            <td>Corrida: </td>
-            <td>
-                <select  name="optCorrida">
-                <option value="0" th:if test="${lote.corrida.id == null}"></option>
-                <div th:each ="corrida : ${corridas}" style="display: none;">
-                    <option value="${corrida.id}">${corrida.nome}</option>
-                </div>
-                </select>
-            </td>
-        </tr>
-        <tr>
             <td>ID: </td>
             <td><input type="text" name="id" disabled/></td>
         </tr>
         <tr>
-            <td>Preço: </td>
+            <td>Corrida: </td>
+            <td>
+                <select  name="corrida">
+                    <option value="0">Selecione uma Corrida</option>
+                    <option th:each ="corrida : ${corridas}" th:value="${corrida.id}" th:text="${corrida.nome}"></option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Preço (R$): </td>
             <td><input type="text" name="preco"/></td>
         </tr>
         <tr>
             <td>Data de Validade: </td>
-            <td><input type="text" name="dataLimite"/></td>
+            <td><input type="date" name="dataLimite"/></td>
         </tr>
     </table>
     <input type="submit" value="Adicionar Lote"/>

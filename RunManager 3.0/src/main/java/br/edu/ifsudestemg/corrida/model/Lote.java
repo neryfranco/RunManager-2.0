@@ -9,6 +9,7 @@ import lombok.Data;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.Date;
 import java.util.List;
 
 @Entity
@@ -17,6 +18,7 @@ public class Lote implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
+    @ManyToOne
     private Corrida corrida;
     private Double preco;
     private String dataLimite;

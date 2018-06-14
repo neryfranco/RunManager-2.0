@@ -7,20 +7,20 @@
 <form th:object="${lote}" method="post">
     <table>
         <tr>
-            <td>Corrida: </td>
-            <td><input th:value="*{id}" type="text" name="id" disabled/></td>
-        </tr>
-        <tr>
             <td>ID: </td>
             <td><input th:value="*{id}" type="text" name="id" disabled/></td>
         </tr>
         <tr>
-            <td>Preço: </td>
-            <td><input th:value="*{preco}" type="text" name="preco" disabled/></td>
+            <td>Corrida: </td>
+            <td><input th:value="*{corrida.nome}"type="text" name="corrida" disabled/></td>
+        </tr>
+        <tr>
+            <td>Preço (R$): </td>
+            <td><input th:value="*{preco}"type="text" name="preco" disabled/></td>
         </tr>
         <tr>
             <td>Data de Validade: </td>
-            <td><input th:value="*{dataLimite}" type="text" name="dataLimite" disabled/></td>
+            <td><input th:value="*{dataLimite}" type="date" name="dataLimite" disabled/></td>
         </tr>
     </table>
     <input type="submit" value="Deletar"/>

@@ -20,7 +20,4 @@ public class Chip implements Serializable {
     @Id
     private Integer numero;
     private Integer tempoCorrida;
-    @ManyToOne
-    private Percurso percurso;
-
 }

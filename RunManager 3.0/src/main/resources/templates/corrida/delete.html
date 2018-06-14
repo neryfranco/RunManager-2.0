@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head"></head>
+<body>
+<h1 th:text="${title}"> Deletar Lote</h1>
+
+<form th:object="${corrida}" method="post">
+    <table>
+        <tr>
+            <td>ID: </td>
+            <td><input th:value="*{id}" type="text" name="id" disabled/></td>
+        </tr>
+        <tr>
+            <td>Nome: </td>
+            <td><input th:value="*{nome}" type="text" name="nome" disabled/></td>
+        </tr>
+        <tr>
+            <td>Local de Largada: </td>
+            <td><input th:value="*{localLargada}" type="text" name="localLargada" disabled/></td>
+        </tr>
+        <tr>
+            <td>Local Chegada:  </td>
+            <td><input  th:value="*{localChegada}" type="text" name="localChegada" disabled></td>
+        </tr>
+        <tr>
+            <td>Horário Largada:  </td>
+            <td><input th:value="*{horarioLargada}"  type="time" name="horarioLargada" disabled></td>
+        </tr>
+        <tr>
+            <td>Data Corrida:  </td>
+            <td><input th:value="*{dataCorrida}"  type="date" name="dataCorrida" disabled></td>
+        </tr>
+        <tr>
+            <td>Data Retirada Kit:   </td>
+            <td><input th:value="*{dataRetiradaKit}"  type="date" name="dataRetiradaKit" disabled></td>
+        </tr>
+        <tr>
+            <td>Local Retirada Kit:  </td>
+            <td><input th:value="*{localRetiradaKit}"  type="text" name="localRetiradaKit" disabled></td>
+        </tr>
+        <tr>
+            <td>Duração Limite (min):  </td>
+            <td><input type="text" th:value="*{duracaoLimite}"  name="duracaoLimite" disabled></td>
+        </tr>
+        <tr>
+            <td>Número Máximo Participantes:  </td>
+            <td><input type="text" th:value="*{numMaxParticipantes}"  name="numMaxParticipantes" disabled></td>
+        </tr>
+        <tr>
+            <td>Percurso: </td>
+            <td><input type="text" th:if="*{percurso} != null" th:value="*{percurso.itinerario}"  name="percurso" disabled></td>
+        </tr>
+    </table>
+    <input type="submit" value="Deletar"/>
+</form>
+</body>
+</html>

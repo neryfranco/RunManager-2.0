@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments :: head"></head>
+<body>
+<h1>Lista de Tapetes</h1>
+
+<table border="1">
+    <tr>
+        <td>ID</td>
+        <td>Rua</td>
+        <td>Km</td>
+    </tr>
+    <tr th:each="tapete : ${tapetes}">
+        <td th:text="${tapete.id}"></td>
+        <td th:text="${tapete.posicao}"></td>
+        <td th:text="${tapete.km}"></td>
+        <td><a th:href="@{'/tapete/edit/' + ${tapete.id}}" >Editar</a></td>
+        <td><a th:href="@{'/tapete/delete/' + ${tapete.id}}">Excluir</a></td>
+    </tr>
+</table>
+<a th:href="@{~/tapete/add}">Adicionar</a>
+</body>
+</html>

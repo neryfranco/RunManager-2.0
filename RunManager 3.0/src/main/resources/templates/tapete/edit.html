@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head"></head>
+<body>
+<h1 th:text="${title}"> Editar </h1>
+
+<form th:object="${tapete}" method="post">
+    <tr>
+        <td>ID: </td>
+        <td><input th:value="*{id}" type="text" name="id" /></td>
+    </tr>
+    <tr>
+        <td>Posição: </td>
+        <td><input th:value="*{posicao}" type="text" name="posicao" /></td>
+    </tr>
+    <tr>
+        <td>Km: </td>
+        <td><input th:value="*{km}" type="text" name="km" /></td>
+    </tr>
+    <input type="submit" value="Editar"/>
+</form>
+
+</body>
+</html>

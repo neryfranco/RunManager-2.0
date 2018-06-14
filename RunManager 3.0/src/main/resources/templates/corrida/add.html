@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head"></head>
+<body>
+<h1 th:text="${title}"> Adicionar Corrida </h1>
+
+<form method="post">
+    <table>
+        <tr>
+            <td>ID: </td>
+            <td><input type="text" name="id" disabled/></td>
+        </tr>
+        <tr>
+            <td>Nome: </td>
+            <td><input type="text" name="nome"/></td>
+        </tr>
+        <tr>
+            <td>Local de Largada: </td>
+            <td><input type="text" name="localLargada"/></td>
+        </tr>
+        <tr>
+            <td>Local Chegada:  </td>
+            <td><input  type="text" name="localChegada"></td>
+        </tr>
+        <tr>
+            <td>Horário Largada:  </td>
+            <td><input  type="time" placeholder="XX:XX:XX" name="horarioLargada" ></td>
+        </tr>
+        <tr>
+            <td>Data Corrida:  </td>
+            <td><input  type="date" placeholder="DD/MM/AAAA" name="dataCorrida" ></td>
+        </tr>
+        <tr>
+            <td>Data Retirada Kit:   </td>
+            <td><input  type="date" placeholder="DD/MM/AAAA"name="dataRetiradaKit" ></td>
+        </tr>
+        <tr>
+            <td>Local Retirada Kit:  </td>
+            <td><input  type="text" name="localRetiradaKit" ></td>
+        </tr>
+        <tr>
+            <td>Duração Limite (min):  </td>
+            <td><input type="text"  name="duracaoLimite" ></td>
+        </tr>
+        <tr>
+            <td>Número Máximo Participantes:  </td>
+            <td><input type="text"  name="numMaxParticipantes" ></td>
+        </tr>
+        <tr>
+            <td>Percurso: </td>
+            <td>
+                <select  name="percurso">
+                    <option value="0">Selecione um Percurso</option>
+                    <option th:each ="percurso : ${percursos}" th:value="${percurso.id}" th:text="${percurso.itinerario}"></option>
+                </select>
+            </td>
+        </tr>
+    </table>
+    <input type="submit" value="Adicionar Corrida"/>
+</form>
+
+</body>
+</html>

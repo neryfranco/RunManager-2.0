@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head"></head>
+<body>
+<h1 th:text="${title}"> Deletar </h1>
+
+<form th:object="${organizador}" method="post">
+    <table>
+        <tr>
+            <td>CPF: </td>
+            <td><input th:value="*{cpf}" type="text" name="cpf" disabled/></td>
+        </tr>
+        <tr>
+            <td>Email: </td>
+            <td><input th:value="*{email}" type="text" name="email" disabled/></td>
+        </tr>
+        <tr>
+            <td>Senha: </td>
+            <td><input th:value="*{senha}" type="text" name="senha" disabled/></td>
+        </tr>
+        <tr>
+            <td>Nome: </td>
+            <td><input th:value="*{nome}" type="text" name="nome" disabled/></td>
+        </tr>
+        <tr>
+            <td>Data de Nascimento: </td>
+            <td><input th:value="*{data_nascimento}" type="text" name="data_nascimento" disabled/></td>
+        </tr>
+        <tr>
+            <td>Rua: </td>
+            <td><input th:value="*{rua}" type="text" name="rua" disabled/></td>
+        </tr>
+        <tr>
+            <td>Sexo: </td>
+            <td><input th:value="*{sexo}" type="text" name="sexo" disabled/></td>
+        </tr>
+        <tr>
+            <td>Telefone Residencial: </td>
+            <td><input th:value="*{telRes}" type="text" name="telRes" disabled/></td>
+
+        </tr>
+        <tr>
+            <td>Telefone Celular: </td>
+            <td><input th:value="*{telCel}" type="text" name="telCel" disabled/></td>
+
+        </tr>
+        <tr>
+            <td>CEP: </td>
+            <td><input th:value="*{cep}" type="text" name="cep" disabled/></td>
+        </tr>
+        <tr>
+            <td>UF: </td>
+            <td><input th:value="*{uf}" size="1" maxlength="2" type="text" name="uf" disabled/></td>
+        </tr>
+        <tr>
+            <td>CIDADE: </td>
+            <td><input th:value="*{cidade}" type="text" name="cidade" disabled/></td>
+        </tr>
+    </table>
+    <input type="submit" value="Excluir"/>
+</form>
+
+</body>
+</html>

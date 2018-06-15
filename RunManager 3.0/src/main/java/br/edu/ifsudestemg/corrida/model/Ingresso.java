@@ -15,7 +15,8 @@ import java.io.Serializable;
 
 public class Ingresso implements Serializable {
     @Id
-    private Long numInscricao;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Integer numInscricao;
     @ManyToOne
     private Kit kit;
     @ManyToOne

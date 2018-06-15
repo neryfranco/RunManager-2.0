@@ -8,11 +8,11 @@
     <table>
         <tr>
             <td>CPF: </td>
-            <td><input th:value="*{cpf}" type="text" name="cpf" readonly/></td>
+            <td><input th:value="*{cpf}" type="number" name="cpf" readonly/></td>
         </tr>
         <tr>
             <td>Email: </td>
-            <td><input th:value="*{email}" type="text" name="email"/></td>
+            <td><input th:value="*{email}" type="email" name="email"/></td>
         </tr>
         <tr>
             <td>Senha: </td>
@@ -24,7 +24,7 @@
         </tr>
         <tr>
             <td>Data de Nascimento: </td>
-            <td><input th:value="*{data_nascimento}" type="text" name="data_nascimento"/></td>
+            <td><input th:value="*{data_nascimento}" type="date" name="data_nascimento"/></td>
         </tr>
         <tr>
             <td>Rua: </td>
@@ -32,21 +32,24 @@
         </tr>
         <tr>
             <td>Sexo: </td>
-            <td><input th:value="*{sexo}" type="text" name="sexo"/></td>
+            <td>
+                <INPUT TYPE="radio" th:checked="*{sexo == 'M'}" NAME="sexo" VALUE="M"> Masculino
+                <INPUT TYPE="radio" th:checked="*{sexo == 'F'}" NAME="sexo" VALUE="F"> Feminino
+            </td>
         </tr>
         <tr>
             <td>Telefone Residencial: </td>
-            <td><input th:value="*{telRes}" type="text" name="telRes"/></td>
+            <td><input th:value="*{telRes}" type="tel" name="telRes"/></td>
 
         </tr>
         <tr>
             <td>Telefone Celular: </td>
-            <td><input th:value="*{telCel}" type="text" name="telCel"/></td>
+            <td><input th:value="*{telCel}" type="tel" name="telCel"/></td>
 
         </tr>
         <tr>
             <td>CEP: </td>
-            <td><input th:value="*{cep}" type="text" name="cep"/></td>
+            <td><input th:value="*{cep}" type="number" name="cep"/></td>
         </tr>
         <tr>
             <td>UF: </td>

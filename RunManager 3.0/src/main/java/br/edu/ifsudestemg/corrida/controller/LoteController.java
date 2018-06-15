@@ -58,9 +58,7 @@ public class LoteController {
     }
 
     @PostMapping(value = "edit/{id}")
-    public String postLoteEdit(@ModelAttribute Lote lote, Model model, @PathVariable Integer id,
-                               @PathVariable Integer numIngressos) throws Exception {
-        lote.setNumIngressos(numIngressos);
+    public String postLoteEdit(@ModelAttribute Lote lote, Model model, @PathVariable Integer id) throws Exception {
         if (id.equals(lote.getId())) {
             loteRepository.save(lote);
         } else {

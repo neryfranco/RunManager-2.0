@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head"></head>
+<body>
+<h1 th:text="${title}"> Deletar </h1>
+
+<form th:object="${kit}" method="post">
+    <table>
+        <tr>
+            <td>Num. Peito: </td>
+            <td><input type="text" th:value="*{numPeito}" name="numPeito" disabled/></td>
+        </tr>
+        <tr>
+            <td>Camisa: </td>
+            <td>
+                <INPUT TYPE="radio" th:checked="*{camisa == 'P'}" NAME="camisa" VALUE="P" disabled> P
+                <INPUT TYPE="radio" th:checked="*{camisa == 'M'}" NAME="camisa" VALUE="M" disabled> M
+                <INPUT TYPE="radio" th:checked="*{camisa == 'G'}" NAME="camisa" VALUE="G" disabled> G
+                <INPUT TYPE="radio" th:checked="*{camisa == 'GG'}" NAME="camisa" VALUE="GG" disabled> GG
+                <INPUT TYPE="radio" th:checked="*{camisa == 'B'}" NAME="camisa" VALUE="B" disabled> Baby Look
+            </td>
+        </tr>
+    </table>
+    <input type="submit" value="Deletar"/>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments :: head"></head>
+<body>
+<h1>Lista de Kits</h1>
+
+<table border="1">
+    <tr>
+        <td>Num. Peito</td>
+        <td>Camisa</td>
+    </tr>
+    <tr th:each="kit : ${kits}">
+        <td th:text="${kit.numPeito}"></td>
+        <td th:text="${kit.camisa}"></td>
+        <td><a th:href="@{'/kit/edit/' + ${kit.numPeito}}" >Editar</a></td>
+        <td><a th:href="@{'/kit/delete/' + ${kit.numPeito}}">Excluir</a></td>
+    </tr>
+</table>
+<a th:href="@{~/kit/add}">Adicionar</a>
+<a href="/">Voltar</a>
+</body>
+</html>

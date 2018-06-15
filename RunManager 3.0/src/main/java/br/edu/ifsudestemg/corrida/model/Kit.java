@@ -19,6 +19,5 @@ public class Kit implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer numPeito;
-    private Chip chip;
     private String camisa;
 }

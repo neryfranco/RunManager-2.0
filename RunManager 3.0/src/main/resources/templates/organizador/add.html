@@ -8,11 +8,11 @@
     <table>
         <tr>
             <td>CPF: </td>
-            <td><input type="text" name="cpf"/></td>
+            <td><input type="number" name="cpf"/></td>
         </tr>
         <tr>
             <td>Email: </td>
-            <td><input type="text" name="email"/></td>
+            <td><input type="email" name="email"/></td>
         </tr>
         <tr>
             <td>Senha: </td>
@@ -24,7 +24,7 @@
         </tr>
         <tr>
             <td>Data de Nascimento: </td>
-            <td><input type="text" name="data_nascimento"/></td>
+            <td><input type="date" name="data_nascimento"/></td>
         </tr>
         <tr>
             <td>Rua: </td>
@@ -32,21 +32,24 @@
         </tr>
         <tr>
             <td>Sexo: </td>
-            <td><input type="text" name="sexo"/></td>
+            <td>
+                <INPUT TYPE="radio" NAME="sexo" VALUE="M"> Masculino
+                <INPUT TYPE="radio" NAME="sexo" VALUE="F"> Feminino
+            </td>
         </tr>
         <tr>
             <td>Telefone Residencial: </td>
-            <td><input type="text" name="telRes"/></td>
+            <td><input type="tel" name="telRes"/></td>
 
         </tr>
         <tr>
             <td>Telefone Celular: </td>
-            <td><input type="text" name="telCel"/></td>
+            <td><input type="tel" name="telCel"/></td>
 
         </tr>
         <tr>
             <td>CEP: </td>
-            <td><input type="text" name="cep"/></td>
+            <td><input type="number" name="cep"/></td>
         </tr>
         <tr>
             <td>UF: </td>
@@ -57,7 +60,7 @@
             <td><input type="text" name="cidade"/></td>
         </tr>
     </table>
-    <input type="submit" value="Adicionar Administrador"/>
+    <input type="submit" value="Adicionar Organizador"/>
 </form>
 
 </body>

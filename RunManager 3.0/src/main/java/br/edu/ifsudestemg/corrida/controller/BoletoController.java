@@ -25,20 +25,20 @@ public class BoletoController {
         }
 
         @GetMapping(value = "add")
-        public String getBoletossAdd(Model model){
+        public String getBoletosAdd(Model model){
             model.addAttribute("operacao", "adicionar");
             model.addAttribute("title", "Adicionar boleto");
             return "boleto/add";
         }
 
         @PostMapping(value = "add")
-        public String postBoletossAdd(Model model, @ModelAttribute Boleto boleto){
+        public String postBoletosAdd(Model model, @ModelAttribute Boleto boleto){
             model.addAttribute("tittle", "Adicionar boleto");
             boletoRepository.save(boleto);
             return "redirect:/boletos";
         }
 
-        @GetMapping(value = "edit/{cpf}")
+        @GetMapping(value = "edit/{id}")
         public String getBoletosEdit(Model model, @PathVariable Integer id) {
             model.addAttribute("operacao", "editar");
             model.addAttribute("title", "Editar boleto");
@@ -49,7 +49,7 @@ public class BoletoController {
             return "boleto/edit";
         }
 
-        @PostMapping(value = "edit/{cpf}")
+        @PostMapping(value = "edit/{id}")
         public String postBoletosEdit(@ModelAttribute Boleto boleto, Model model,
                                      @PathVariable Integer id) throws Exception {
             if (id.equals(boleto.getId())) {
@@ -60,7 +60,7 @@ public class BoletoController {
             return "redirect:/boletos";
         }
 
-        @GetMapping(value = "delete/{cpf}")
+        @GetMapping(value = "delete/{id}")
         public String getBoletosDelete(Model model, @PathVariable Integer id) {
             model.addAttribute("operacao", "deletar");
             model.addAttribute("title", "Excluir boleto");
@@ -72,7 +72,7 @@ public class BoletoController {
             return "boleto/delete";
         }
 
-        @PostMapping(value = "delete/{cpf}")
+        @PostMapping(value = "delete/{id}")
         public String postBoletosDelete(@PathVariable Integer id, @ModelAttribute Boleto boleto) {
             boletoRepository.delete(boleto);
             return "redirect:/boletos";

@@ -10,14 +10,21 @@
             <td>ID: </td>
             <td><input type="text" name="id"/></td>
         </tr>
-        <tr>
-            <td>CORRIDA: </td>
-            <td><input type="text" name="corrida"/></td>
+        <td>
+            <select  name="corrida">
+                <option value="0">Selecione um Kit</option>
+                <option th:each ="corrida : ${corridas}" th:value="${corrida.id}" th:text="${corrida.nome}"></option>
+            </select>
+        </td>
         </tr>
         <tr>
-            <td>CATEGORIA: </td>
-            <td><input type="text" name="categoria"/></td>
-        </tr>
+            <td>Lote: </td>
+            <td>
+                <select  name="categoria">
+                    <option value="0">Selecione um Lote</option>
+                    <option th:each ="categoria : ${categorias}" th:value="${categoria.id}" th:text="${categoria.descricao}"></option>
+                </select>
+            </td>
 
     </table>
     <input type="submit" value="Adicionar Ranking"/>

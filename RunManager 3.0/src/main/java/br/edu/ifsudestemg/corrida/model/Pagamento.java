@@ -20,7 +20,6 @@ public class Pagamento implements Serializable {
     @ManyToOne
     private Ingresso ingresso;
 
-    public Double getValor(){
-        return ingresso.getLote().getPreco();
+    public Double getValor(){ return ingresso.getLote().getPreco();
     }
 }

@@ -16,6 +16,7 @@
     @Data
     public class Boleto implements Serializable {
         @Id
+        @GeneratedValue(strategy = GenerationType.AUTO)
         private Integer id;
         private String nomeCliente;
         private String cpf;

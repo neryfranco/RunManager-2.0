@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head"></head>
+<body>
+<h1 th:text="${title}"> Editar </h1>
+
+<form th:object="${atleta}" method="post">
+    <input th:value="*{nome}" type="text" name="nome"/>
+    <input th:value="*{cep}" type="text" name="cep"/>
+    <input type="submit" value="Editar"/>
+</form>
+
+</body>
+</html>

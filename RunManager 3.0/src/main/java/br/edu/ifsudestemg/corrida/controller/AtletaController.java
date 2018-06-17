@@ -29,7 +29,7 @@ public class AtletaController {
     public String getAtletasAdd(Model model){
         model.addAttribute("operacao", "adicionar");
         model.addAttribute("title", "Adicionar atleta");
-        return "atleta/atletas";
+        return "atleta/add";
     }
 
     @PostMapping(value = "add")
@@ -47,12 +47,12 @@ public class AtletaController {
         if (atleta.isPresent()){
             model.addAttribute("atleta", atleta.get());
         }
-        return "atleta/atletas";
+        return "atleta/edit";
     }
 
     @PostMapping(value = "edit/{cpf}")
     public String postAtletaEdit(@ModelAttribute Atleta atleta, Model model,
-                                        @PathVariable Long cpf) throws Exception {
+                                        @PathVariable String cpf) throws Exception {
         if (cpf.equals(atleta.getCpf())) {
             atletaRepository.save(atleta);
         } else {
@@ -70,11 +70,11 @@ public class AtletaController {
             model.addAttribute("atleta", atleta.get());
         }
 
-        return "atleta/atletas";
+        return "atleta/delete";
     }
 
     @PostMapping(value = "delete/{cpf}")
-    public String postAtletaDelete(@PathVariable Long cpf, @ModelAttribute Atleta atleta) {
+    public String postAtletaDelete(@PathVariable String cpf, @ModelAttribute Atleta atleta) {
         atletaRepository.delete(atleta);
         return "redirect:/atletas";
     }

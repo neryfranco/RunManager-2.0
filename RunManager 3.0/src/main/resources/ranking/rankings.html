@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments :: head"></head>
+<body>
+<h1>Lista de Atletas</h1>
+
+<table border="1">
+    <tr>
+        <td>CPF</td>
+        <td>Nome</td>
+    </tr>
+    <tr th:each="ranking : ${rankings}">
+        <td th:text="${ranking.categoria}"></td>
+        <td th:text="${ranking.corrida}"></td>
+        <td><a th:href="@{'/ranking/edit/' + ${ranking.id}}" >Editar</a></td>
+        <td><a th:href="@{'/ranking/delete/' + ${ranking.id}}">Excluir</a></td>
+    </tr>
+</table>
+<a th:href="@{~/ranking/add}">Adicionar</a>
+<a href="/">Voltar</a>
+</body>
+</html>

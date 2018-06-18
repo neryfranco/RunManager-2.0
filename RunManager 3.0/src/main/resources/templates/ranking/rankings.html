@@ -6,12 +6,12 @@
 
 <table border="1">
     <tr>
-        <td>CPF</td>
         <td>Nome</td>
+        <td>Descrição</td>
     </tr>
     <tr th:each="ranking : ${rankings}">
-        <td th:text="${ranking.categoria}"></td>
-        <td th:text="${ranking.corrida}"></td>
+        <td th:text="${ranking.corrida.nome}"></td>
+        <td th:text="${ranking.categoria.descricao}"></td>
         <td><a th:href="@{'/ranking/edit/' + ${ranking.id}}" >Editar</a></td>
         <td><a th:href="@{'/ranking/delete/' + ${ranking.id}}">Excluir</a></td>
     </tr>

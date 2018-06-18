@@ -36,7 +36,7 @@ public class AtletaController {
     public String postAtletasAdd(Model model, @ModelAttribute Atleta atleta){
         model.addAttribute("tittle", "Adicionar atleta");
         atletaRepository.save(atleta);
-        return "redirect:/atletas";
+        return "redirect:/atleta";
     }
 
     @GetMapping(value = "edit/{cpf}")
@@ -58,7 +58,7 @@ public class AtletaController {
         } else {
             model.addAttribute("error", "Dados incorretos");
         }
-        return "redirect:/atletas";
+        return "redirect:/atleta";
     }
 
     @GetMapping(value = "delete/{cpf}")
@@ -76,7 +76,7 @@ public class AtletaController {
     @PostMapping(value = "delete/{cpf}")
     public String postAtletaDelete(@PathVariable String cpf, @ModelAttribute Atleta atleta) {
         atletaRepository.delete(atleta);
-        return "redirect:/atletas";
+        return "redirect:/atleta";
     }
 
 }

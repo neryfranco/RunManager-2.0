@@ -4,7 +4,7 @@
 <body>
 <h1 th:text="${title}"> Deletar </h1>
 
-<form th:object="${administrador}" method="post">
+<form th:object="${atleta}" method="post">
     <table>
         <tr>
             <td>CPF: </td>
@@ -53,8 +53,17 @@
             <td><input th:value="*{uf}" size="1" maxlength="2" type="text" name="uf" disabled/></td>
         </tr>
         <tr>
-            <td>CIDADE: </td>
+            <td>Cidade: </td>
             <td><input th:value="*{cidade}" type="text" name="cidade" disabled/></td>
+        </tr>
+        <tr>
+            <td>Pace: </td>
+            <td><input type="text" name="pace" disabled/></td>
+        </tr>
+        <tr>
+
+            <td>Apelido: </td>
+            <td><input type="text" name="apelido" disabled/></td>
         </tr>
     </table>
     <input type="submit" value="Excluir"/>

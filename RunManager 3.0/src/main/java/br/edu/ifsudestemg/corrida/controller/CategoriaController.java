@@ -35,7 +35,7 @@ public class CategoriaController {
         public String postCategoriasAdd(Model model, @ModelAttribute Categoria categoria){
             model.addAttribute("tittle", "Adicionar categoria");
             categoriaRepository.save(categoria);
-            return "redirect:/categorias";
+            return "redirect:/categoria";
         }
 
         @GetMapping(value = "edit/{id}")
@@ -57,7 +57,7 @@ public class CategoriaController {
             } else {
                 model.addAttribute("error", "Dados incorretos");
             }
-            return "redirect:/categorias";
+            return "redirect:/categoria";
         }
 
         @GetMapping(value = "delete/{id}")
@@ -75,7 +75,7 @@ public class CategoriaController {
         @PostMapping(value = "delete/{id}")
         public String postCategoriaDelete(@PathVariable Integer id, @ModelAttribute Categoria categoria) {
             categoriaRepository.delete(categoria);
-            return "redirect:/categorias";
+            return "redirect:/categoria";
         }
 
     }

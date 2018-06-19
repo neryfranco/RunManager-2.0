@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head"></head>
+<body>
+<h1 th:text="${title}"> Adicionar </h1>
+
+<form method="post">
+    <table>
+        <tr>
+            <td>ID: </td>
+            <td><input type="number" name="id"/></td>
+        </tr>
+        <tr>
+            <td>Método de Pagamento: </td>
+            <td>
+                <select  name="metodoPagamento">
+                    <option value="boleto">Boleto Bancário</option>
+                    <option value="cartaoCredito">Cartão de Crédito</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Ingresso: </td>
+            <td>
+                <select  name="ingresso">
+                    <option value="0">Selecione um Kit</option>
+                    <option th:each ="ingresso : ${ingressos}" th:value="${ingresso.numInscricao}" th:text="${ingresso.atleta.nome}"></option>
+                </select>
+            </td>
+        </tr>
+
+    </table>
+    <input type="submit" value="Adicionar Pagamento"/>
+</form>
+
+</body>
+</html>

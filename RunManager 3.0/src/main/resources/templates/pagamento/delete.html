@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head"></head>
+<body>
+<h1 th:text="${title}"> Deletar </h1>
+
+<form th:object="${pagamento}" method="post">
+    <table>
+        <tr>
+            <td>ID: </td>
+            <td><input type="number" name="id" disabled/></td>
+        </tr>
+        <tr>
+            <td>Método de Pagamento: </td>
+            <td><input th:value="*{metodoPagamento}" type="text" name="metodoPagamento" disabled/></td>
+        </tr>
+
+    </table>
+    <input type="submit" value="Excluir"/>
+</form>
+
+</body>
+</html>

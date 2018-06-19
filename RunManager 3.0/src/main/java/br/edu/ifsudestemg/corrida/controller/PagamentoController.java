@@ -39,7 +39,7 @@ public class PagamentoController {
     public String postPagamentosAdd(Model model, @ModelAttribute Pagamento pagamento){
         model.addAttribute("tittle", "Adicionar pagamento");
         pagamentoRepository.save(pagamento);
-        return "redirect:/pagamentos";
+        return "redirect:/pagamento";
     }
 
     @GetMapping(value = "edit/{id}")
@@ -62,7 +62,7 @@ public class PagamentoController {
         } else {
             model.addAttribute("error", "Dados incorretos");
         }
-        return "redirect:/pagamentos";
+        return "redirect:/pagamento";
     }
 
     @GetMapping(value = "delete/{id}")
@@ -81,6 +81,6 @@ public class PagamentoController {
     @PostMapping(value = "delete/{id}")
     public String postPagamentosDelete(@PathVariable Integer id, @ModelAttribute Pagamento pagamento) {
         pagamentoRepository.delete(pagamento);
-        return "redirect:/pagamentos";
+        return "redirect:/pagamento";
     }
 }

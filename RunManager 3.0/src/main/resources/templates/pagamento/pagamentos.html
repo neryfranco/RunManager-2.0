@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments :: head"></head>
+<body>
+<h1>Lista de Pagamento</h1>
+
+<table border="1">
+    <tr>
+        <td>Método Pagamento</td>
+        <td>Nome</td>
+    </tr>
+    <tr th:each="pagamento : ${pagamentos}">
+        <td th:text="${pagamento.metodoPagamento}"></td>
+        <td th:text="${pagamento.ingresso.numInscricao}"></td>
+        <td><a th:href="@{'/pagamento/edit/' + ${pagamento.id}}" >Editar</a></td>
+        <td><a th:href="@{'/pagamento/delete/' + ${pagamento.id}}">Excluir</a></td>
+    </tr>
+</table>
+<a th:href="@{~/pagamento/add}">Adicionar</a>
+<a href="/">Voltar</a>
+</body>
+</html>

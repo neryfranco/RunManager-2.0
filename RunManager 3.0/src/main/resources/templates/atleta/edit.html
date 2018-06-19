@@ -61,15 +61,15 @@
         </tr>
         <tr>
             <td>Pace: </td>
-            <td><input type="text" name="pace"/></td>
+            <td><input th:value="*{pace}" type="text" name="pace"/></td>
         </tr>
         <tr>
 
             <td>Apelido: </td>
-            <td><input type="text" name="apelido"/></td>
+            <td><input th:value="*{apelido}" type="text" name="apelido"/></td>
         </tr>
-        <input type="submit" value="Editar"/>
     </table>
+    <input type="submit" value="Editar"/>
 </form>
 
 </body>

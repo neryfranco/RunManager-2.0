@@ -8,5 +8,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 @Component
 public interface AdministradorRepository extends CrudRepository<Administrador, String> {
+    boolean existsAdministradorByEmailAndSenha(String email,  String senha);
+    Administrador getAdministradorByEmail(String email);
 
 }

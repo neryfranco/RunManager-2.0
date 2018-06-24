@@ -1,19 +1,27 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head th:replace="fragments :: head"></head>
-<body>
-    <h2>Menu </h2>
-    <a href="administrador">Administrador</a>
-    <a href="organizador">Organizador</a>
-    <a href="atleta">Atleta</a>
-    <a href="tapete">Tapete</a>
-    <a href="categoria">Categoria</a>
-    <a href="percurso">Percurso</a>
-    <a href="corrida">Corrida</a>
-    <a href="ranking">Ranking</a>
-    <a href="kit">Kit</a>
-    <a href="lote">Lote</a>
-    <a href="ingresso">Ingresso</a>
-    <a href="pagamento">Pagamento</a>
+<body class="text-center">
+<form class="form-signin" method="post">
+
+    <h1 class="h3 mb-3 font-weight-normal">Login</h1>
+    <p th:text="${msg}"></p>
+    <label for="login" class="sr-only">Email address</label>
+    <input type="email" id="login" name="login" class="form-control" placeholder="Email address" required autofocus>
+    <label for="senha" class="sr-only">Password</label>
+    <input type="password" id="senha" name="senha" class="form-control" placeholder="Password" required>
+    <select class="form-control" name="tipoUsuario" id="tipoUsuario">
+        <option value="administrador">Administrador</option>
+        <option value="atleta">Atleta</option>
+        <option value="organizador">Organizador</option>
+    </select>
+    <div class="checkbox mb-3">
+        <label>
+            <input type="checkbox" value="remember-me"> Remember me
+        </label>
+    </div>
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+    <p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>
+</form>
 </body>
 </html>

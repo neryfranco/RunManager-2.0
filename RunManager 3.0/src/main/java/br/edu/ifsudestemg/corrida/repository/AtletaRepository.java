@@ -8,5 +8,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 @Component
 public interface AtletaRepository extends CrudRepository<Atleta, String> {
+    boolean existsAtletaByEmailAndSenha(String email,  String senha);
+    Atleta getAtletaByEmail(String email);
 
 }

@@ -1,27 +1,35 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head th:replace="fragments :: head"></head>
-<body class="text-center">
-<form class="px-50 py-50" method="post">
-
-    <h1 class="h3 mb-3 font-weight-normal">Login</h1>
-    <p th:text="${msg}"></p>
-    <label for="login" class="sr-only">Email address</label>
-    <input type="email" id="login" name="login" class="form-control" placeholder="Email address" required autofocus>
-    <label for="senha" class="sr-only">Password</label>
-    <input type="password" id="senha" name="senha" class="form-control" placeholder="Password" required>
-    <select class="form-control" name="tipoUsuario" id="tipoUsuario">
-        <option value="administrador">Administrador</option>
-        <option value="atleta">Atleta</option>
-        <option value="organizador">Organizador</option>
-    </select>
-    <div class="checkbox mb-3">
-        <label>
-            <input type="checkbox" value="remember-me"> Remember me
-        </label>
+<body>
+<h2>Menu </h2>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Dropdown
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a href="administrador" class="dropdown-item">Administrador</a>
+                    <a href="organizador" class="dropdown-item">Organizador</a>
+                    <a href="atleta" class="dropdown-item">Atleta</a>
+                    <a href="tapete" class="dropdown-item">Tapete</a>
+                    <a href="categoria" class="dropdown-item">Categoria</a>
+                    <a href="percurso" class="dropdown-item">Percurso</a>
+                    <a href="corrida" class="dropdown-item">Corrida</a>
+                    <a href="ranking" class="dropdown-item">Ranking</a>
+                    <a href="kit" class="dropdown-item">Kit</a>
+                    <a href="lote" class="dropdown-item">Lote</a>
+                    <a href="ingresso" class="dropdown-item">Ingresso</a>
+                    <a href="pagamento" class="dropdown-item">Pagamento</a>
+                </div>
+            </li>
+        </ul>
     </div>
-    <button class="btn btn-success" type="submit">Sign in</button>
-    <p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>
-</form>
+</nav>
 </body>
 </html>

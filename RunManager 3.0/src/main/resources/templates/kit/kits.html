@@ -3,8 +3,36 @@
 <head th:replace="fragments :: head"></head>
 <body>
 <h1>Lista de Kits</h1>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Dropdown
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a href="administrador" class="dropdown-item">Administrador</a>
+                    <a href="organizador" class="dropdown-item">Organizador</a>
+                    <a href="atleta" class="dropdown-item">Atleta</a>
+                    <a href="tapete" class="dropdown-item">Tapete</a>
+                    <a href="categoria" class="dropdown-item">Categoria</a>
+                    <a href="percurso" class="dropdown-item">Percurso</a>
+                    <a href="corrida" class="dropdown-item">Corrida</a>
+                    <a href="ranking" class="dropdown-item">Ranking</a>
+                    <a href="kit" class="dropdown-item">Kit</a>
+                    <a href="lote" class="dropdown-item">Lote</a>
+                    <a href="ingresso" class="dropdown-item">Ingresso</a>
+                    <a href="pagamento" class="dropdown-item">Pagamento</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
 
-<table border="1">
+<table class="table table-hover table-dark">
     <tr>
         <td>Num. Peito</td>
         <td>Camisa</td>
@@ -12,11 +40,11 @@
     <tr th:each="kit : ${kits}">
         <td th:text="${kit.numPeito}"></td>
         <td th:text="${kit.camisa}"></td>
-        <td><a th:href="@{'/kit/edit/' + ${kit.numPeito}}" >Editar</a></td>
-        <td><a th:href="@{'/kit/delete/' + ${kit.numPeito}}">Excluir</a></td>
+        <td><a class="badge badge-light" th:href="@{'/kit/edit/' + ${kit.numPeito}}" >Editar</a></td>
+        <td><a class="badge badge-light" th:href="@{'/kit/delete/' + ${kit.numPeito}}">Excluir</a></td>
     </tr>
 </table>
-<a th:href="@{~/kit/add}">Adicionar</a>
-<a href="/">Voltar</a>
+<a class="badge badge-success" th:href="@{~/kit/add}">Adicionar</a>
+<a class="badge badge-success" href="/">Voltar</a>
 </body>
 </html>

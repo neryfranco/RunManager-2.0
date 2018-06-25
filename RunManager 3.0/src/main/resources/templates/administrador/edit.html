@@ -8,27 +8,27 @@
     <table>
         <tr>
             <td>CPF: </td>
-            <td><input th:value="*{cpf}" type="number" name="cpf" readonly/></td>
+            <td><input class="form-control" th:value="*{cpf}" type="number" name="cpf" readonly/></td>
         </tr>
         <tr>
             <td>Email: </td>
-            <td><input th:value="*{email}" type="email" name="email"/></td>
+            <td><input class="form-control" th:value="*{email}" type="email" name="email"/></td>
         </tr>
         <tr>
             <td>Senha: </td>
-            <td><input th:value="*{senha}" type="text" name="senha"/></td>
+            <td><input class="form-control" th:value="*{senha}" type="password" name="senha"/></td>
         </tr>
         <tr>
             <td>Nome: </td>
-            <td><input th:value="*{nome}" type="text" name="nome"/></td>
+            <td><input class="form-control" th:value="*{nome}" type="text" name="nome"/></td>
         </tr>
         <tr>
             <td>Data de Nascimento: </td>
-            <td><input th:value="*{data_nascimento}" type="date" name="data_nascimento"/></td>
+            <td><input class="form-control" th:value="*{data_nascimento}" type="date" name="data_nascimento"/></td>
         </tr>
         <tr>
             <td>Rua: </td>
-            <td><input th:value="*{rua}" type="text" name="rua"/></td>
+            <td><input class="form-control" th:value="*{rua}" type="text" name="rua"/></td>
         </tr>
         <tr>
             <td>Sexo: </td>
@@ -39,28 +39,28 @@
         </tr>
         <tr>
             <td>Telefone Residencial: </td>
-            <td><input th:value="*{telRes}" type="tel" name="telRes"/></td>
+            <td><input class="form-control" th:value="*{telRes}" type="tel" name="telRes"/></td>
 
         </tr>
         <tr>
             <td>Telefone Celular: </td>
-            <td><input th:value="*{telCel}" type="tel" name="telCel"/></td>
+            <td><input class="form-control" th:value="*{telCel}" type="tel" name="telCel"/></td>
 
         </tr>
         <tr>
             <td>CEP: </td>
-            <td><input th:value="*{cep}" type="number" name="cep"/></td>
+            <td><input class="form-control" th:value="*{cep}" type="number" name="cep"/></td>
         </tr>
         <tr>
             <td>UF: </td>
-            <td><input th:value="*{uf}" size="1" maxlength="2" type="text" name="uf"/></td>
+            <td><input class="form-control" th:value="*{uf}" size="1" maxlength="2" type="text" name="uf"/></td>
         </tr>
         <tr>
             <td>Cidade: </td>
-            <td><input th:value="*{cidade}" type="text" name="cidade"/></td>
+            <td><input class="form-control" th:value="*{cidade}" type="text" name="cidade"/></td>
         </tr>
     </table>
-    <input type="submit" value="Editar"/>
+    <input class="btn btn-outline-success" type="submit" value="Editar"/>
 </form>
 
 </body>

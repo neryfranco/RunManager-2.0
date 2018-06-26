@@ -2,12 +2,10 @@ package br.edu.ifsudestemg.corrida.controller;
 
 
 import br.edu.ifsudestemg.corrida.model.Atleta;
+import br.edu.ifsudestemg.corrida.model.Corrida;
 import br.edu.ifsudestemg.corrida.model.Ingresso;
 import br.edu.ifsudestemg.corrida.model.Kit;
-import br.edu.ifsudestemg.corrida.repository.AtletaRepository;
-import br.edu.ifsudestemg.corrida.repository.IngressoRepository;
-import br.edu.ifsudestemg.corrida.repository.KitRepository;
-import br.edu.ifsudestemg.corrida.repository.LoteRepository;
+import br.edu.ifsudestemg.corrida.repository.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -27,6 +25,8 @@ public class IngressoController {
     private KitRepository kitRepository;
     @Autowired
     private AtletaRepository atletaRepository;
+    @Autowired
+    private CorridaRepository corridaRepository;
 
     @GetMapping(value = "")
     public String ingressos(Model model){
@@ -37,9 +37,10 @@ public class IngressoController {
     }
 
     @GetMapping(value = "add")
-    public String getIngressosAdd(Model model){
+    public String getIngressosAdd(Model model, @ModelAttribute Corrida corrida){
         model.addAttribute("operacao", "adicionar");
         model.addAttribute("title", "Adicionar ingresso");
+        model.addAttribute("corridas", corridaRepository.findAll());
         model.addAttribute("lotes", loteRepository.findAll());
         model.addAttribute("kits", kitRepository.findAll());
         model.addAttribute("atletas", atletaRepository.findAll());

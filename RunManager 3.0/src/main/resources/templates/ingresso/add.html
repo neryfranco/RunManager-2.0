@@ -11,11 +11,20 @@
             <td><input class="form-control" type="text" name="numInscricao" disabled/></td>
         </tr>
         <tr>
-            <td>Kit: </td>
+            <td>Atleta: </td>
             <td>
-                <select class="form-control" name="kit">
-                    <option value="0">Selecione um Kit</option>
-                    <option th:each ="kit : ${kits}" th:value="${kit.numPeito}" th:text="${kit.numPeito + ' - Camisa:' + kit.camisa}"></option>
+                <select class="form-control" name="atleta">
+                    <option value="0">Selecione um Atleta</option>
+                    <option th:each ="atleta : ${atletas}" th:value="${atleta.cpf}" th:text="${atleta.cpf + ' - ' + atleta.nome}"></option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Corrida: </td>
+            <td>
+                <select class="form-control" name="corrida">
+                    <option value="0">Selecione uma Corrida</option>
+                    <option th:each ="corrida : ${corridas}" th:value="${corrida.id}" th:text="${corrida.nome}"></option>
                 </select>
             </td>
         </tr>
@@ -29,11 +38,11 @@
             </td>
         </tr>
         <tr>
-            <td>Atleta: </td>
+            <td>Kit: </td>
             <td>
-                <select class="form-control" name="atleta">
-                    <option value="0">Selecione um Atleta</option>
-                    <option th:each ="atleta : ${atletas}" th:value="${atleta.cpf}" th:text="${atleta.cpf + ' - ' + atleta.nome}"></option>
+                <select class="form-control" name="kit">
+                    <option value="0">Selecione um Kit</option>
+                    <option th:each ="kit : ${kits}" th:value="${kit.numPeito}" th:text="${kit.numPeito + ' - Camisa:' + kit.camisa}"></option>
                 </select>
             </td>
         </tr>

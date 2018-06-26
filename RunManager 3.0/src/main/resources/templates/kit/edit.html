@@ -11,14 +11,12 @@
             <td><input class="form-control" type="text" th:value="*{numPeito}" name="numPeito" disabled/></td>
         </tr>
         <tr>
-            <td>Camisa: </td>
-            <td>
-                <INPUT class="form-control" TYPE="radio" th:checked="*{camisa == 'P'}" NAME="camisa" VALUE="P"> P
-                <INPUT class="form-control" TYPE="radio" th:checked="*{camisa == 'M'}" NAME="camisa" VALUE="M"> M
-                <INPUT class="form-control" TYPE="radio" th:checked="*{camisa == 'G'}" NAME="camisa" VALUE="G"> G
-                <INPUT class="form-control" TYPE="radio" th:checked="*{camisa == 'GG'}" NAME="camisa" VALUE="GG"> GG
-                <INPUT class="form-control" TYPE="radio" th:checked="*{camisa == 'B'}" NAME="camisa" VALUE="B"> Baby Look
-            </td>
+            <td>Nome: </td>
+            <td><input class="form-control" type="text" th:value="*{nome}" name="nome"/></td>
+        </tr>
+        <tr>
+            <td>Descrição: </td>
+            <td><textarea class="form-control" rows="4" cols="30" th:value="*{descricao}" name="descricao"></textarea></td>
         </tr>
     </table>
     <input class="btn btn-outline-success" type="submit" value="Editar"/>

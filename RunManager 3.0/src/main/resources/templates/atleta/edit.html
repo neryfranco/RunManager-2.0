@@ -66,15 +66,14 @@
         <tr>
             <td>Camisa: </td>
             <td>
-                <INPUT class="form-control" TYPE="radio" th:checked="*{camisa == 'P'}" NAME="camisa" VALUE="P"> P
-                <INPUT class="form-control" TYPE="radio" th:checked="*{camisa == 'M'}" NAME="camisa" VALUE="M"> M
-                <INPUT class="form-control" TYPE="radio" th:checked="*{camisa == 'G'}" NAME="camisa" VALUE="G"> G
-                <INPUT class="form-control" TYPE="radio" th:checked="*{camisa == 'GG'}" NAME="camisa" VALUE="GG"> GG
-                <INPUT class="form-control" TYPE="radio" th:checked="*{camisa == 'B'}" NAME="camisa" VALUE="B"> Baby Look
+                <INPUT aria-label="Radio button for following text input"  TYPE="radio" th:checked="*{camisa == 'P'}" NAME="camisa" VALUE="P"> P
+                <INPUT aria-label="Radio button for following text input"  TYPE="radio" th:checked="*{camisa == 'M'}" NAME="camisa" VALUE="M"> M
+                <INPUT aria-label="Radio button for following text input"  TYPE="radio" th:checked="*{camisa == 'G'}" NAME="camisa" VALUE="G"> G
+                <INPUT aria-label="Radio button for following text input"  TYPE="radio" th:checked="*{camisa == 'GG'}" NAME="camisa" VALUE="GG"> GG
+                <INPUT aria-label="Radio button for following text input"  TYPE="radio" th:checked="*{camisa == 'B'}" NAME="camisa" VALUE="B"> Baby Look
             </td>
         </tr>
         <tr>
-
             <td>Apelido: </td>
             <td><input class="form-control" th:value="*{apelido}" type="text" name="apelido"/></td>
         </tr>

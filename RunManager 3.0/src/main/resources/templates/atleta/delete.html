@@ -58,12 +58,15 @@
         </tr>
         <tr>
             <td>Pace: </td>
-            <td><input class="form-control" type="text" name="pace" disabled/></td>
+            <td><input class="form-control" th:value="*{pace}" type="text" name="pace" disabled/></td>
         </tr>
         <tr>
-
+            <td>Camisa: </td>
+            <td><input class="form-control" th:value="*{camisa}" type="text" name="apelido" disabled/></td>
+        </tr>
+        <tr>
             <td>Apelido: </td>
-            <td><input class="form-control" type="text" name="apelido" disabled/></td>
+            <td><input class="form-control" th:value="*{apelido}" type="text" name="apelido" disabled/></td>
         </tr>
     </table>
     <input class="btn btn-outline-success" type="submit" value="Excluir"/>

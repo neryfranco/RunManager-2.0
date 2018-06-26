@@ -11,6 +11,17 @@
             <td><input class="form-control" type="text" name="id" disabled/></td>
         </tr>
         <tr>
+            <td>Percurso: </td>
+            <td>
+                <select class="form-control" name="percurso">
+                    <option value="0">Selecione um Percurso</option>
+                    <th:block th:each ="percurso : ${percursos}">
+                        <option th:value="${percurso.id}" th:text="${percurso.itinerario}"></option>
+                    </th:block>
+                </select>
+            </td>
+        </tr>
+        <tr>
             <td>Posição: </td>
             <td><input class="form-control" type="number" name="posicao"/></td>
         </tr>

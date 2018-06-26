@@ -23,6 +23,6 @@ public class Atleta extends Usuario implements Serializable {
     private String senha;
     private Double pace;
     private String apelido;
-
+    private String camisa;
 
 }

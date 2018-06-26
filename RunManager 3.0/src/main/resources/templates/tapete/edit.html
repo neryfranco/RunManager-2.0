@@ -5,18 +5,31 @@
 <h1 th:text="${title}"> Editar </h1>
 
 <form th:object="${tapete}" method="post">
-    <tr>
-        <td>ID: </td>
-        <td><input class="form-control" th:value="*{id}" type="text" name="id" /></td>
-    </tr>
-    <tr>
-        <td>Posição: </td>
-        <td><input class="form-control" th:value="*{posicao}" type="number" name="posicao" /></td>
-    </tr>
-    <tr>
-        <td>Km: </td>
-        <td><input class="form-control" th:value="*{km}" type="number" name="km" /></td>
-    </tr>
+    <table>
+        <tr>
+            <td>ID: </td>
+            <td><input class="form-control" th:value="*{id}" type="text" name="id" disabled/></td>
+        </tr>
+        <tr>
+            <td>Percurso: </td>
+            <td>
+                <select class="form-control" name="percurso">
+                    <option value="0">Selecione um Percurso</option>
+                    <th:block th:each ="percurso : ${percursos}">
+                        <option th:value="${percurso.id}" th:text="${percurso.itinerario}" th:selected="${percurso} == *{percurso}"></option>
+                    </th:block>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Posição: </td>
+            <td><input class="form-control" th:value="*{posicao}" type="number" name="posicao" /></td>
+        </tr>
+        <tr>
+            <td>Km: </td>
+            <td><input class="form-control" th:value="*{km}" type="number" name="km" /></td>
+        </tr>
+    </table>
     <input class="btn btn-outline-success" type="submit" value="Editar"/>
 </form>
 

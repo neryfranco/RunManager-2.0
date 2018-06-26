@@ -2,6 +2,7 @@ package br.edu.ifsudestemg.corrida.controller;
 
 
 import br.edu.ifsudestemg.corrida.model.Tapete;
+import br.edu.ifsudestemg.corrida.repository.PercursoRepository;
 import br.edu.ifsudestemg.corrida.repository.TapeteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -16,6 +17,8 @@ public class TapeteController {
 
     @Autowired
     private TapeteRepository tapeteRepository;
+    @Autowired
+    private PercursoRepository percursoRepository;
 
     @GetMapping(value = "")
     public String tapetes(Model model){
@@ -29,6 +32,7 @@ public class TapeteController {
     public String getTapetesAdd(Model model){
         model.addAttribute("operacao", "adicionar");
         model.addAttribute("title", "Adicionar tapete");
+        model.addAttribute("percursos", percursoRepository.findAll());
         return "tapete/add";
     }
 
@@ -43,6 +47,7 @@ public class TapeteController {
     public String getTapeteEdit(Model model, @PathVariable Integer id) {
         model.addAttribute("operacao", "editar");
         model.addAttribute("title", "Editar tapete");
+        model.addAttribute("percursos", percursoRepository.findAll());
         Optional<Tapete> tapete = tapeteRepository.findById(id);
         if (tapete.isPresent()){
             model.addAttribute("tapete", tapete.get());

@@ -35,11 +35,13 @@
 <table class="table table-hover table-dark">
     <tr>
         <td>ID</td>
-        <td>Rua</td>
+        <td>Percurso</td>
+        <td>Posição</td>
         <td>Km</td>
     </tr>
     <tr th:each="tapete : ${tapetes}">
         <td th:text="${tapete.id}"></td>
+        <td th:text="${tapete.percurso.itinerario}"></td>
         <td th:text="${tapete.posicao}"></td>
         <td th:text="${tapete.km}"></td>
         <td><a  class="badge badge-light" th:href="@{'/tapete/edit/' + ${tapete.id}}" >Editar</a></td>

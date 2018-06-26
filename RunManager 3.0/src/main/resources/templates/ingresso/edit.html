@@ -8,12 +8,12 @@
     <table>
         <tr>
             <td>Num. Inscrição: </td>
-            <td><input type="text" th:value="${ingresso.numInscricao}" name="numInscricao" disabled/></td>
+            <td><input class="form-control" type="text" th:value="${ingresso.numInscricao}" name="numInscricao" disabled/></td>
         </tr>
         <tr>
             <td>Kit: </td>
             <td>
-                <select  name="kit">
+                <select class="form-control" name="kit">
                     <option value="0">Selecione um Kit</option>
                     <option th:each ="kit : ${kits}" th:value="${kit.numPeito}" th:selected="${kit} == *{kit}" th:text="${kit.numPeito + ' - Camisa:' + kit.camisa}"></option>
                 </select>
@@ -22,7 +22,7 @@
         <tr>
             <td>Lote: </td>
             <td>
-                <select  name="lote">
+                <select class="form-control" name="lote">
                     <option value="0">Selecione um Lote</option>
                     <option th:each ="lote : ${lotes}" th:value="${lote.id}" th:selected="${lote} == *{lote}" th:text="${lote.corrida.nome + ' - R$' + lote.preco}"></option>
                 </select>
@@ -31,7 +31,7 @@
         <tr>
             <td>Atleta: </td>
             <td>
-                <select  name="atleta">
+                <select class="form-control" name="atleta">
                     <option value="0">Selecione um Atleta</option>
                     <option th:each ="atleta : ${atletas}" th:value="${atleta.cpf}" th:selected="${atleta} == *{atleta}" th:text="${atleta.cpf + ' - ' + atleta.nome}"></option>
                 </select>

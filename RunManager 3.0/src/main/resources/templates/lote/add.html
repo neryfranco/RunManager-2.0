@@ -8,12 +8,12 @@
     <table>
         <tr>
             <td>ID: </td>
-            <td><input type="text" name="id" disabled/></td>
+            <td><input class="form-control" type="text" name="id" disabled/></td>
         </tr>
         <tr>
             <td>Corrida: </td>
             <td>
-                <select  name="corrida">
+                <select class="form-control" name="corrida">
                     <option value="0">Selecione uma Corrida</option>
                     <option th:each ="corrida : ${corridas}" th:value="${corrida.id}" th:text="${corrida.nome}"></option>
                 </select>
@@ -21,15 +21,15 @@
         </tr>
         <tr>
             <td>Preço (R$): </td>
-            <td><input type="number" name="preco"/></td>
+            <td><input class="form-control" type="number" name="preco"/></td>
         </tr>
         <tr>
             <td>Data de Validade: </td>
-            <td><input type="date" name="dataLimite"/></td>
+            <td><input class="form-control" type="date" name="dataLimite"/></td>
         </tr>
         <tr>
             <td>Numero de Ingressos: </td>
-            <td><input type="number" name="numIngressos"/></td>
+            <td><input class="form-control" type="number" name="numIngressos"/></td>
         </tr>
     </table>
     <input class="btn btn-outline-success" type="submit" value="Adicionar Lote"/>

@@ -8,11 +8,11 @@
     <table>
         <tr>
             <td>ID: </td>
-            <td><input type="text" name="id" readonly/></td>
+            <td><input class="form-control" type="text" name="id" readonly/></td>
         </tr>
         <td>Corrida: </td>
         <td>
-            <select  name="corrida">
+            <select class="form-control" name="corrida">
                 <option value="0">Selecione um Kit</option>
                 <option th:each ="corrida : ${corridas}" th:value="${corrida.id}" th:text="${corrida.nome}"></option>
             </select>
@@ -21,7 +21,7 @@
         <tr>
             <td>Categoria: </td>
             <td>
-                <select  name="categoria">
+                <select class="form-control" name="categoria">
                     <option value="0">Selecione uma Categoria</option>
                     <option th:each ="categoria : ${categorias}" th:value="${categoria.id}" th:text="${categoria.descricao}"></option>
                 </select>

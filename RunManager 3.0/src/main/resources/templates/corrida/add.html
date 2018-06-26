@@ -8,23 +8,23 @@
     <table>
         <tr>
             <td>ID: </td>
-            <td><input type="text" name="id" disabled/></td>
+            <td><input class="form-control" type="text" name="id" disabled/></td>
         </tr>
         <tr>
             <td>Nome: </td>
-            <td><input type="text" name="nome"/></td>
+            <td><input class="form-control" type="text" name="nome"/></td>
         </tr>
         <tr>
             <td>Local de Largada: </td>
-            <td><input type="text" name="localLargada"/></td>
+            <td><input class="form-control" type="text" name="localLargada"/></td>
         </tr>
         <tr>
             <td>Local Chegada:  </td>
-            <td><input  type="text" name="localChegada"></td>
+            <td><input class="form-control" type="text" name="localChegada"></td>
         </tr>
         <tr>
             <td>Horário Largada:  </td>
-            <td><input  type="time" placeholder="XX:XX:XX" name="horarioLargada" ></td>
+            <td><input class="form-control" type="time" placeholder="XX:XX:XX" name="horarioLargada" ></td>
         </tr>
         <tr>
             <td>Data Corrida:  </td>
@@ -32,24 +32,24 @@
         </tr>
         <tr>
             <td>Data Retirada Kit:   </td>
-            <td><input  type="date" placeholder="DD/MM/AAAA"name="dataRetiradaKit" ></td>
+            <td><input class="form-control" type="date" placeholder="DD/MM/AAAA"name="dataRetiradaKit" ></td>
         </tr>
         <tr>
             <td>Local Retirada Kit:  </td>
-            <td><input  type="text" name="localRetiradaKit" ></td>
+            <td><input class="form-control" type="text" name="localRetiradaKit" ></td>
         </tr>
         <tr>
             <td>Duração Limite (min):  </td>
-            <td><input type="number"  name="duracaoLimite" ></td>
+            <td><input class="form-control" type="number"  name="duracaoLimite" ></td>
         </tr>
         <tr>
             <td>Número Máximo Participantes:  </td>
-            <td><input type="number"  name="numMaxParticipantes" ></td>
+            <td><input class="form-control" type="number"  name="numMaxParticipantes" ></td>
         </tr>
         <tr>
             <td>Percurso: </td>
             <td>
-                <select  name="percurso">
+                <select class="form-control" name="percurso">
                     <option value="0">Selecione um Percurso</option>
                     <option th:each ="percurso : ${percursos}" th:value="${percurso.id}" th:text="${percurso.itinerario}"></option>
                 </select>

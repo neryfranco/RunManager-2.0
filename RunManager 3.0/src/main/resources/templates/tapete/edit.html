@@ -7,15 +7,15 @@
 <form th:object="${tapete}" method="post">
     <tr>
         <td>ID: </td>
-        <td><input th:value="*{id}" type="text" name="id" /></td>
+        <td><input class="form-control" th:value="*{id}" type="text" name="id" /></td>
     </tr>
     <tr>
         <td>Posição: </td>
-        <td><input th:value="*{posicao}" type="number" name="posicao" /></td>
+        <td><input class="form-control" th:value="*{posicao}" type="number" name="posicao" /></td>
     </tr>
     <tr>
         <td>Km: </td>
-        <td><input th:value="*{km}" type="number" name="km" /></td>
+        <td><input class="form-control" th:value="*{km}" type="number" name="km" /></td>
     </tr>
     <input class="btn btn-outline-success" type="submit" value="Editar"/>
 </form>

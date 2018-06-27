@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head th:replace="fragments :: head"></head>
 <body>
 <h2>Menu </h2>
@@ -9,8 +9,12 @@
             <li class="nav-item active">
                 <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
             </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="relatorio">Relatórios <span class="sr-only">(current)</span></a>
+            </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="/" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" href="/" id="navbarDropdown" role="button" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">
                     Dropdown
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -30,17 +34,153 @@
         </ul>
     </div>
 </nav>
-
-    <a class="badge badge-info" href="administrador">Administrador</a>
-    <a class="badge badge-info" href="organizador">Organizador</a>
-    <a class="badge badge-info" href="atleta">Atleta</a>
-    <a class="badge badge-info" href="tapete">Tapete</a>
-    <a class="badge badge-info" href="categoria">Categoria</a>
-    <a class="badge badge-info" href="percurso">Percurso</a>
-    <a class="badge badge-info" href="corrida">Corrida</a>
-    <a class="badge badge-info" href="ranking">Ranking</a>
-    <a class="badge badge-info" href="kit">Kit</a>
-    <a class="badge badge-info" href="lote">Lote</a>
-    <a class="badge badge-info" href="ingresso">Ingresso</a>
+<div class="content-wrapper">
+    <div class="container-fluid">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="#">Dashboard</a>
+            </li>
+            <li class="breadcrumb-item active">Menu Principal</li>
+        </ol>
+        <div class="content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xl-3 col-sm-6 mb-3">
+                        <div class="card text-white bg-primary o-hidden h-100">
+                            <div class="card-body">
+                                <div class="card-body-icon">
+                                    <i class="fa fa-flag-checkered fa-lg"></i>
+                                </div>
+                                <div class="mr-5"> Administradores</div>
+                            </div>
+                            <a class="card-footer text-white clearfix small z-1"
+                               th:href="administrador">
+                                <span class="float-left">Cadastrar</span>
+                                <span class="float-right">
+                <i class="fa fa-angle-right"></i>
+              </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-sm-6 mb-3">
+                        <div class="card text-white bg-primary o-hidden h-100">
+                            <div class="card-body">
+                                <div class="card-body-icon">
+                                    <i class="fa fa-flag-checkered fa-lg"></i>
+                                </div>
+                                <div class="mr-5">Atletas</div>
+                            </div>
+                            <a class="card-footer text-white clearfix small z-1" th:href="atleta">
+                                <span class="float-left">Cadastrar</span>
+                                <span class="float-right">
+                <i class="fa fa-angle-right"></i>
+              </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-sm-6 mb-3">
+                        <div class="card text-white bg-primary o-hidden h-100">
+                            <div class="card-body">
+                                <div class="card-body-icon">
+                                    <i class="fa fa-flag-checkered fa-lg"></i>
+                                </div>
+                                <div class="mr-5">Organizadores</div>
+                            </div>
+                            <a class="card-footer text-white clearfix small z-1"
+                               th:href="organizador">
+                                <span class="float-left">Cadastrar</span>
+                                <span class="float-right">
+                <i class="fa fa-angle-right"></i>
+              </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-sm-6 mb-3">
+                        <div class="card text-white bg-primary o-hidden h-100">
+                            <div class="card-body">
+                                <div class="card-body-icon">
+                                    <i class="fa fa-flag-checkered fa-lg"></i>
+                                </div>
+                                <div class="mr-5">Corridas</div>
+                            </div>
+                            <a class="card-footer text-white clearfix small z-1" th:href="corrida">
+                                <span class="float-left">Cadastrar</span>
+                                <span class="float-right">
+                <i class="fa fa-angle-right"></i>
+              </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-3 col-sm-6 mb-3">
+                        <div class="card text-white bg-primary o-hidden h-100">
+                            <div class="card-body">
+                                <div class="card-body-icon">
+                                    <i class="fa fa-flag-checkered fa-lg"></i>
+                                </div>
+                                <div class="mr-5"> Categorias</div>
+                            </div>
+                            <a class="card-footer text-white clearfix small z-1" th:href="categoria">
+                                <span class="float-left">Cadastrar</span>
+                                <span class="float-right">
+                <i class="fa fa-angle-right"></i>
+              </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-sm-6 mb-3">
+                        <div class="card text-white bg-primary o-hidden h-100">
+                            <div class="card-body">
+                                <div class="card-body-icon">
+                                    <i class="fa fa-flag-checkered fa-lg"></i>
+                                </div>
+                                <div class="mr-5">Percursos</div>
+                            </div>
+                            <a class="card-footer text-white clearfix small z-1" th:href="percurso">
+                                <span class="float-left">Cadastrar</span>
+                                <span class="float-right">
+                <i class="fa fa-angle-right"></i>
+              </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-sm-6 mb-3">
+                        <div class="card text-white bg-primary o-hidden h-100">
+                            <div class="card-body">
+                                <div class="card-body-icon">
+                                    <i class="fa fa-flag-checkered fa-lg"></i>
+                                </div>
+                                <div class="mr-5"> Lotes</div>
+                            </div>
+                            <a class="card-footer text-white clearfix small z-1" th:href="lote">
+                                <span class="float-left">Cadastrar</span>
+                                <span class="float-right">
+                <i class="fa fa-angle-right"></i>
+              </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-sm-6 mb-3">
+                        <div class="card text-white bg-primary o-hidden h-100">
+                            <div class="card-body">
+                                <div class="card-body-icon">
+                                    <i class="fa fa-flag-checkered fa-lg"></i>
+                                </div>
+                                <div class="mr-5">Ingressos</div>
+                            </div>
+                            <a class="card-footer text-white clearfix small z-1" th:href="ingresso">
+                                <span class="float-left">Cadastrar</span>
+                                <span class="float-right">
+                <i class="fa fa-angle-right"></i>
+              </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>

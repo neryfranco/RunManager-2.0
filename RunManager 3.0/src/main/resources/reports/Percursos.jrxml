@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Percursos" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d48d4b17-1b46-493d-9b8f-36c6a8232180">
+
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Corrida"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT corrida.percurso.descricao,
+	corrida.percurso.distancia,
+	corrida.percurso.itinerario
+FROM corrida.percurso]]>
+	</queryString>
+	<field name="descricao" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="descricao"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="percurso"/>
+	</field>
+	<field name="distancia" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="distancia"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="percurso"/>
+	</field>
+	<field name="itinerario" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="itinerario"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="percurso"/>
+	</field>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="72">
+			<frame>
+				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#006699" uuid="59434b94-4bac-4a4f-837c-f7baf82a3e62"/>
+				<staticText>
+					<reportElement x="20" y="20" width="234" height="43" forecolor="#FFFFFF" uuid="e75ecacd-26d0-4d8c-bee8-6e42c183379a"/>
+					<textElement>
+						<font size="34" isBold="true"/>
+					</textElement>
+					<text><![CDATA[TITLE]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="395" y="43" width="180" height="20" forecolor="#FFFFFF" uuid="ac6fd64c-5910-4a4f-9a27-07347c80cdcd"/>
+					<textElement textAlignment="Right">
+						<font size="14" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Add a description here]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="13"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="21">
+			<line>
+				<reportElement x="-20" y="20" width="595" height="1" forecolor="#666666" uuid="e377bf80-5a24-4c66-812c-c992894d58e9"/>
+			</line>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="185" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="cd00bf23-36ef-4844-8980-b8af556db41a">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5c6592bd-9735-4ea7-ae28-86f418bab944"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[descricao]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="185" y="0" width="185" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="07d3ef3f-a613-4f00-bbbf-eef5850266f2">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="bda9efd2-a44f-480f-b788-d27790198f99"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[distancia]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="370" y="0" width="185" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="ec4892de-7e26-44a1-a621-5de5a55def73">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="70a17465-0cc3-4fe2-9344-2c9ca52d71b7"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[itinerario]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="19" width="555" height="1" uuid="5cce2605-b879-412a-a451-caa6e2f45f83"/>
+			</line>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="0" y="0" width="185" height="20" uuid="81301c80-95b2-4851-9894-adc547ec5bef">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5c6592bd-9735-4ea7-ae28-86f418bab944"/>
+				</reportElement>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{descricao}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="185" y="0" width="185" height="20" uuid="350c9c84-0cc8-4a4d-9e8a-eb9198204cf7">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="bda9efd2-a44f-480f-b788-d27790198f99"/>
+				</reportElement>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{distancia}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="370" y="0" width="185" height="20" uuid="e6a6020c-8b18-4f73-8c5d-6991c7d2fe5e">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="70a17465-0cc3-4fe2-9344-2c9ca52d71b7"/>
+				</reportElement>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{itinerario}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="17">
+			<textField>
+				<reportElement mode="Opaque" x="0" y="4" width="515" height="13" backcolor="#E6E6E6" uuid="b7397e2e-d814-42ed-9b3d-5984348334f4"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement mode="Opaque" x="515" y="4" width="40" height="13" backcolor="#E6E6E6" uuid="2bb0dc80-4c35-4980-8c7f-7d382836f894"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="0" y="4" width="100" height="13" uuid="85937565-b612-4399-a244-2598db98e617"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>

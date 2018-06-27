@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Ingressos" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="313c52ef-76d4-4d58-8d46-6fd6ea9d077d">
+
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Corrida"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT corrida.ingresso.kit_num_peito,
+	corrida.ingresso.num_inscricao,
+	corrida.ingresso.atleta_cpf
+FROM corrida.ingresso]]>
+	</queryString>
+	<field name="kit_num_peito" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="kit_num_peito"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ingresso"/>
+	</field>
+	<field name="num_inscricao" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="num_inscricao"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ingresso"/>
+	</field>
+	<field name="atleta_cpf" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="atleta_cpf"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ingresso"/>
+	</field>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="72">
+			<frame>
+				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#006699" uuid="7f7b524e-e13e-4c23-a661-1ca9eaa36b8e"/>
+				<staticText>
+					<reportElement x="20" y="20" width="234" height="43" forecolor="#FFFFFF" uuid="ebb12f69-77f0-41f1-9c1c-ccda275a6b69"/>
+					<textElement>
+						<font size="34" isBold="true"/>
+					</textElement>
+					<text><![CDATA[TITLE]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="395" y="43" width="180" height="20" forecolor="#FFFFFF" uuid="8b1159ca-070d-4f72-83fa-e238e25b3ceb"/>
+					<textElement textAlignment="Right">
+						<font size="14" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Add a description here]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="13"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="21">
+			<line>
+				<reportElement x="-20" y="20" width="595" height="1" forecolor="#666666" uuid="1e96943f-605c-4e31-a9b6-7cb1f9ec0de1"/>
+			</line>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="185" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="c5c0c01e-a7f2-4798-8686-3389460f1606">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5e6ff3d7-354e-438f-994e-90d6c88596df"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[kit_num_peito]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="185" y="0" width="185" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="4480acd0-6f43-499a-8e5a-45c69054122f">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a2fb6ac2-1025-4172-aba8-d177c6a145f4"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[num_inscricao]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="370" y="0" width="185" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="76e32504-603a-4bac-95ff-00ac8492e52e">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="bed8bc28-0ec3-4948-9b28-a29c7d6958bb"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[atleta_cpf]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="19" width="555" height="1" uuid="db7af0f6-b7e3-4f7c-a4e5-bff0dce9f2b8"/>
+			</line>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="0" y="0" width="185" height="20" uuid="a7b85454-62b7-408b-bbff-9325769a14cf">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5e6ff3d7-354e-438f-994e-90d6c88596df"/>
+				</reportElement>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{kit_num_peito}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="185" y="0" width="185" height="20" uuid="5bac5dd5-daa3-4217-bfc7-b26cf51364b2">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a2fb6ac2-1025-4172-aba8-d177c6a145f4"/>
+				</reportElement>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{num_inscricao}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="370" y="0" width="185" height="20" uuid="b71022e0-1c7d-4130-b490-63683f454814">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="bed8bc28-0ec3-4948-9b28-a29c7d6958bb"/>
+				</reportElement>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{atleta_cpf}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="17">
+			<textField>
+				<reportElement mode="Opaque" x="0" y="4" width="515" height="13" backcolor="#E6E6E6" uuid="afab17c6-e0a0-40f8-8904-dd331727700a"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement mode="Opaque" x="515" y="4" width="40" height="13" backcolor="#E6E6E6" uuid="b79972ac-622c-444c-9b9e-2023020527ac"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="0" y="4" width="100" height="13" uuid="1bcaa187-6077-4adb-b944-ce65c2ee2cf0"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>

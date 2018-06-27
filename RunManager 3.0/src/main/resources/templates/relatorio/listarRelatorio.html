@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head"></head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="listarRelatorio">Relatórios <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Dropdown
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a href="administrador" class="dropdown-item">Administrador</a>
+                    <a href="organizador" class="dropdown-item">Organizador</a>
+                    <a href="atleta" class="dropdown-item">Atleta</a>
+                    <a href="tapete" class="dropdown-item">Tapete</a>
+                    <a href="categoria" class="dropdown-item">Categoria</a>
+                    <a href="percurso" class="dropdown-item">Percurso</a>
+                    <a href="corrida" class="dropdown-item">Corrida</a>
+                    <a href="ranking" class="dropdown-item">Ranking</a>
+                    <a href="kit" class="dropdown-item">Kit</a>
+                    <a href="lote" class="dropdown-item">Lote</a>
+                    <a href="ingresso" class="dropdown-item">Ingresso</a>
+                    <a href="pagamento" class="dropdown-item">Pagamento</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+    <div class="d-flex align-items-center flex-column justify-content-center h-100 bg-dark text-white">
+        <h1>Lista de Relatorios</h1>
+
+        <div class="card mb-4 box-shadow">
+            <div class="card-body">
+                <h5 class="text-black-50">Enderecos</h5>
+                <div class="d-flex justify-content-between align-items-center">
+                    <a class="btn btn-lg btn-primary" th:href="@{'~/relatorio/enderecos'}">Gerar</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mb-4 box-shadow">
+            <div class="card-body">
+                <h5 class="text-black-50">Eventos</h5>
+                <div class="d-flex justify-content-between align-items-center">
+                    <a class="btn btn-lg btn-primary" th:href="@{'~/relatorio/eventos'}">Gerar</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mb-4 box-shadow">
+            <div class="card-body">
+                <h5 class="text-black-50">Atletas</h5>
+                <div class="d-flex justify-content-between align-items-center">
+                    <a class="btn btn-lg btn-primary" th:href="@{'~/relatorio/atletas'}">Gerar</a>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="card mb-4 box-shadow">
+            <div class="card-body">
+                <h5 class="text-black-50">Inscricoes</h5>
+                <div class="d-flex justify-content-between align-items-center">
+                    <a class="btn btn-lg btn-primary" th:href="@{'~/relatorio/inscricoes'}">Gerar</a>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="card mb-4 box-shadow">
+            <div class="card-body">
+                <h5 class="text-black-50">Pagamentos</h5>
+                <div class="d-flex justify-content-between align-items-center">
+                    <a class="btn btn-lg btn-primary" th:href="@{'~/relatorio/pagamentos'}">Gerar</a>
+                </div>
+            </div>
+        </div>
+
+</body>
+</html>

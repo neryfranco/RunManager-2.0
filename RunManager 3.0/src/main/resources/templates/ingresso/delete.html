@@ -15,7 +15,7 @@
             <td>
                 <select class="form-control" name="kit" disabled>
                     <option value="0">Selecione um Kit</option>
-                    <option th:each ="kit : ${kits}" th:value="${kit.numPeito}" th:selected="${kit} == *{kit}" th:text="${kit.numPeito + ' - Camisa:' + kit.camisa}" ></option>
+                    <option th:each ="kit : ${kits}" th:value="${kit.numPeito}" th:selected="${kit} == *{kit}" th:text="${kit.numPeito}" ></option>
                 </select>
             </td>
         </tr>
